@@ -7,6 +7,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Swiggy Offers</title>
     <Style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            /* border: 2px solid red; */
+            height: 80px;
+        }
+
+        .child2>div>a {
+            text-decoration: none;
+            color: rgb(53, 53, 53);
+        }
+
+        .child2>div>a>p {
+            font-size: 18px;
+        }
+
+        .child1>div>a {
+            text-decoration: none;
+            /* color: rgb(53,53,53); */
+            color: rgb(0, 0, 104);
+            font-weight: bolder;
+        }
+
+        #loc {
+            color: rgb(53, 53, 53);
+            opacity: 0.7;
+        }
+
+        .navEl>a {
+            display: flex;
+            align-items: center;
+        }
+
+        .navEl>a:hover {
+            color: orange;
+        }
+
+        .navEl>a>p:last-child::first-letter {
+            font-weight: bolder;
+        }
+
+        .navEl>a>img {
+            width: 35px;
+            margin-left: 35px;
+        }
+
+        .fa-solid {
+            line-height: 3.6;
+        }
+
+        .fa-regular {
+            line-height: 3.6;
+        }
+
+        .child1 {
+            display: flex;
+            /* border: 2px solid red; */
+            /* justify-content: center; */
+            align-items: center;
+        }
+
+        .child2 {
+            display: flex;
+            /* border: 2px solid red; */
+            align-items: center;
+            /* justify-content: center; */
+
+            width: 48%;
+        }
+
+        .child2>div {
+            margin-right: 58px;
+        }
+
+        .child1 {
+            display: flex;
+            /* border: 2px solid red; */
+            align-items: center;
+            /* justify-content: center; */
+
+            width: 30%;
+        }
+
+        .child1>div {
+            margin-left: 30px;
+        }
+
         body,
         html {
             margin: 0;
@@ -132,8 +224,50 @@
 </head>
 
 <body>
-    <img src="http://www.pngimagesfree.com/LOGO/S/Swiggy/Swiggy-Logo-PNG.png" height="50" width="50"
-        alt="Swiggy logo"><br><br>
+    <nav>
+        <div class="child1">
+            <div class="navEl">
+                <a href="homePage.html"><img src="https://seeklogo.com/images/S/swiggy-logo-8EF8260FA4-seeklogo.com.png"
+                        alt="Swiggy Logo"></a>
+            </div>
+            <div class="navEl">
+                <a href="">
+                    <p>Other&nbsp;&nbsp;&nbsp;</p>
+                    <p id="loc">Pune, Maharashtra, India</p>
+                </a>
+            </div>
+        </div>
+        <div class="child2">
+            <div class="navEl">
+                <a href="">
+                    <i class="fa-solid fa-magnifying-glass">&nbsp;&nbsp;&nbsp;</i>
+                    <p>Search</p>
+                </a>
+            </div>
+            <div class="navEl">
+                <a href=""><i class="fa-solid fa-life-ring">&nbsp;&nbsp;&nbsp;</i>
+                    <p>Offers</p>
+                </a>
+            </div>
+            <div class="navEl">
+                <a href=""><i class="fa-regular fa-circle-question">&nbsp;&nbsp;&nbsp;</i>
+                    <p>Help</p>
+                </a>
+            </div>
+            <div class="navEl">
+                <a href=""><i class="fa-regular fa-user">&nbsp;&nbsp;&nbsp;</i>
+                    <p id="user">Sign in</p>
+                </a>
+            </div>
+            <div class="navEl">
+                <a href=""><i class="fa-solid fa-cart-shopping">&nbsp;&nbsp;&nbsp;</i>
+                    <p>Cart</p>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+
     <div class="raj">
         <div>
             <div class="offer"><b>Offers for you</b></div>
