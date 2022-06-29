@@ -9,10 +9,11 @@
     <link rel="stylesheet" href="all.min.css">
     <style>
         /* navbar start ------------------------->*/
-        *{
+        * {
             margin: 0;
             padding: 0;
         }
+
         nav {
             display: flex;
             justify-content: space-between;
@@ -24,6 +25,7 @@
             text-decoration: none;
             color: rgb(53, 53, 53);
         }
+
         .child2>div>a>p {
             font-size: 18px;
         }
@@ -34,89 +36,300 @@
             color: rgb(0, 0, 104);
             font-weight: bolder;
         }
-        #loc{
+
+        #loc {
             color: rgb(53, 53, 53);
             opacity: 0.7;
         }
-        .navEl>a{
+
+        .navEl>a {
             display: flex;
             align-items: center;
         }
-        .navEl>a:hover{
+
+        .navEl>a:hover {
             color: orange;
         }
-        .navEl>a>p:last-child::first-letter{
+
+        .navEl>a>p:last-child::first-letter {
             font-weight: bolder;
         }
-        .navEl>a>img{
+
+        .navEl>a>img {
             width: 35px;
             margin-left: 35px;
         }
-        .fa-solid{
+
+        .fa-solid {
             line-height: 3.6;
         }
-        .fa-regular{
+
+        .fa-regular {
             line-height: 3.6;
         }
-        .child1{
+
+        .child1 {
             display: flex;
             /* border: 2px solid red; */
             /* justify-content: center; */
             align-items: center;
         }
-        .child2{
+
+        .child2 {
             display: flex;
             /* border: 2px solid red; */
             align-items: center;
             /* justify-content: center; */
-            
+
             width: 48%;
         }
-        .child2>div{
+
+        .child2>div {
             margin-right: 58px;
         }
-        .child1{
+
+        .child1 {
             display: flex;
             /* border: 2px solid red; */
             align-items: center;
             /* justify-content: center; */
-            
+
             width: 30%;
         }
-        .child1>div{
+
+        .child1>div {
             margin-left: 30px;
         }
+
         /* navbar End ------------------------->*/
 
         /* heading start -----------------------> */
-        .heading{
+        .heading {
             display: flex;
             padding: 0 50px;
             /* border: 2px solid red; */
             background-color: #171a29;
 
         }
+
         /* .heading>div>a{ */
-            /* width: 270px; */
-            /* margin: 30px 20px; */
+        /* width: 270px; */
+        /* margin: 30px 20px; */
         /* } */
-        .heading>div>a>img{
+        .heading>div>a>img {
             width: 100%;
         }
-        .cont{
+
+        .cont {
             width: 270px;
             height: 270px;
             /* border: 2px solid red; */
             margin: 30px 20px;
             transition: 0.4s;
         }
-        .cont:hover{
-            transform:scale(1.04);
+
+        .cont:hover {
+            transform: scale(1.04);
             z-index: 2;
         }
-        /* heading end ---------------------------> */
 
-        /*  */
+        /* heading end ------------------------------------> */
+
+        /* Second nav start -------------------------------> */
+        .secNavBox {
+            width: 100%;
+            display: flex;
+            /* align-items: center; */
+            justify-content: center;
+        }
+
+        .secNav {
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            width: 90%;
+            /* border: 2px solid red; */
+        }
+
+        .secNav>.secNavChild2 {
+            display: flex;
+            align-items: center;
+            width: 60%;
+            justify-content: space-between;
+        }
+
+        .secNav>.secNavChild2>.secNavChildEl {
+            display: flex;
+            align-items: center;
+            /* border: 2px solid red; */
+            height: 100%;
+        }
+
+        .secNav>.secNavChild2>.secNavChildEl:hover {
+            border-bottom: 1px solid black;
+            height: 102%;
+        }
+
+        .secNav>.secNavChild1 {
+            display: flex;
+            align-items: center;
+        }
+
+        .secNav>.secNavChild1>h1 {
+            font-size: 28px;
+        }
+
+        .secNav>.secNavChild2>.secNavChildEl>a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #686b78;
+            font-size: 16px;
+        }
+
+        .secNav>.secNavChild2>.secNavChildEl>a>i {
+            margin-left: 8px;
+            color: orange;
+        }
+
+        .secNav>.secNavChild2>.secNavChildEl:last-child>a>p {
+            color: #3d4152;
+            font-weight: 600;
+        }
+
+        .secNav>.secNavChild2>.secNavChildEl:last-child>a>p:hover {
+            color: orange;
+        }
+
+        hr {
+            margin-top: -15px;
+            width: 90%;
+            margin: auto;
+            border: 0.01px solid lightgray;
+            opacity: 0.6;
+        }
+        /* Second nav end -------------------------------> */
+
+        /* gridding start -------------------------------> */
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        .outContainer{
+            width: 100%;
+            /* border: 2px solid red;    */
+            padding-top: 20px;
+        }
+        .outContainer>.incontainer{
+            width: 93.5%;
+            margin: auto;
+            /* border: 2px solid blue; */
+            display: grid;
+            row-gap: 15px;
+            column-gap: 15px;
+            grid-template-columns: repeat(4,1fr);
+        }
+        .outContainer>.incontainer>a:hover{
+            /* box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px; */
+            /* box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px; */
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+        }
+        .outContainer>.incontainer>a>.box{
+            /* border: 2px solid green; */
+            padding: 20px 0;
+        }
+        .outContainer>.incontainer>a>.box>.BoxEl1{
+            /* border: 2px solid orange; */
+            width: 254px;
+            margin: auto;
+
+        }
+        .outContainer>.incontainer>a>.box>.BoxEl2{
+            /* border: 2px solid black; */
+            width: 85%;
+            margin: auto;
+            margin-top: 15px;
+        }
+        .outContainer>.incontainer>a>.box>.BoxEl2>h4{
+            font-size: 17px;
+        }
+        .outContainer>.incontainer>a>.box>.BoxEl2>p{
+            font-size: 13px;
+            color: #686b78;
+        }
+        .outContainer>.incontainer>a>.box>.BoxEl3{
+            /* border: 2px solid yellow; */
+            width: 85%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+        .outContainer>.incontainer>a>.box>.BoxEl3>.BoxEl3It1{
+            background-color: #48c479;
+            display: flex;
+            width: 43px;
+            justify-content: center;
+            align-items: center;
+            height: 20px;
+            justify-content:space-evenly;
+            /* justify-content: center; */
+        }
+        .outContainer>.incontainer>a>.box>.BoxEl3>.BoxEl3It2>p{
+            padding-top: 4.5px;
+            font-size: 12px;
+            font-weight: 400;
+            color: #535665;
+        }
+        .outContainer>.incontainer>a>.box>.BoxEl3>.BoxEl3It3>p{
+            padding-top: 4.5px;
+            font-size: 12px;
+            font-weight: 400;
+            color: #535665;
+        }
+        .outContainer>.incontainer>a>.box>.BoxEl3>.BoxEl3It1>p{
+            padding-top: 4.5px;
+            font-size: 12px;
+            font-weight: 400;
+            color: white;
+        }
+        .outContainer>.incontainer>a>.box>.BoxEl3>.dot{
+            font-weight: 600;
+            padding-bottom: 6px;
+        }
+        .outContainer>.incontainer>a>.box>.BoxEl3>.BoxEl3It1>img{
+            width: 12px;
+            height: 12px;
+        }
+        .outContainer>.incontainer>a>.box>.BoxEl4{
+            /* border: 2px solid purple; */
+            width: 85%;
+            margin: auto;
+            display: flex;
+            margin-top: 10px;
+        }
+        .outContainer>.incontainer>a>.box>.BoxEl4>img{
+            margin-right: 4px;
+            height: 20px;
+        }
+        .outContainer>.incontainer>a>.box>.BoxEl4>p{
+            margin-top: 2px;
+            color: #8a584b;
+            font-size: 15px;
+            font-weight: 400;
+        }
+        .outContainer>.incontainer>a>.box>.BoxEl1>img{
+            width: 254px;
+            margin: auto;
+        }
+        .outContainer>.incontainer>a>.box>hr{
+            width: 85%;
+            /* border: 0.25px solid;
+            opacity: 0.2; */
+        }
+        /* grid end ---------------------------------------------> */
     </style>
 </head>
 
@@ -166,20 +379,313 @@
 
     <div class="heading">
         <div class="cont">
-            <a href=""><img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_520,h_520/rng/md/carousel/production/pneknawbadtvceqzwiep" alt=""></a>
+            <a href=""><img
+                    src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_520,h_520/rng/md/carousel/production/pneknawbadtvceqzwiep"
+                    alt=""></a>
         </div>
         <div class="cont">
-            <a href=""><img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_520,h_520/rng/md/carousel/production/jcjcvebiczqe5jr2vijo" alt=""></a>
+            <a href=""><img
+                    src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_520,h_520/rng/md/carousel/production/jcjcvebiczqe5jr2vijo"
+                    alt=""></a>
         </div>
         <div class="cont">
-            <a href=""><img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_520,h_520/rng/md/carousel/production/omhjfsrgi5fjkg81ivhj" alt=""></a>
+            <a href=""><img
+                    src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_520,h_520/rng/md/carousel/production/omhjfsrgi5fjkg81ivhj"
+                    alt=""></a>
         </div>
         <div class="cont">
-            <a href=""><img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_520,h_520/rng/md/carousel/production/ifi2lbzxeu1hvsqrsip3" alt=""></a>
+            <a href=""><img
+                    src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_520,h_520/rng/md/carousel/production/ifi2lbzxeu1hvsqrsip3"
+                    alt=""></a>
         </div>
     </div>
 
-    
+    <div class="secNavBox">
+        <div class="secNav">
+            <div class="secNavChild1">
+                <h1>100 restaurants</h1>
+            </div>
+            <div class="secNavChild2">
+                <div class="secNavChildEl">
+                    <a href="">
+                        <p>Relevance</p>
+                    </a>
+                </div>
+                <div class="secNavChildEl">
+                    <a href="">
+                        <p>Delivery Time</p>
+                    </a>
+                </div>
+                <div class="secNavChildEl">
+                    <a href="">
+                        <p>Rating</p>
+                    </a>
+                </div>
+                <div class="secNavChildEl">
+                    <a href="">
+                        <p>Cost: Low to High</p>
+                    </a>
+                </div>
+                <div class="secNavChildEl">
+                    <a href="">
+                        <p>Cost: High to Low</p>
+                    </a>
+                </div>
+                <div class="secNavChildEl">
+                    <a href="">
+                        <p>Filter</p><i class="fa-solid fa-filter"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+
+    <div class="outContainer">
+        <div class="incontainer">
+            <a href="">
+                <div class="box">
+                    <div class="BoxEl1">
+                        <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/pwg0c0snpd6u0mu1edoa" alt="Food Image">
+                    </div>
+                    <div class="BoxEl2">
+                        <h4>Neo's Chinese</h4>
+                        <p>North Indian Punjabi</p>
+                    </div>
+                    <div class="BoxEl3">
+                        <div class="BoxEl3It1">
+                            <img src="star1.png" alt="">
+                            <p>4.4</p>
+                        </div>
+                        <div class="dot">.</div>
+                        <div class="BoxEl3It2">
+                            <p>44 MINS</p>
+                        </div>
+                        <div class="dot">.</div>
+                        <div class="BoxEl3It3">
+                            <p>&#8377;200 FOR TWO</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="BoxEl4">
+                        <img src="tar1.png" alt="">
+                        <p>50% off | Use WELCOME50</p>
+                    </div>
+                </div>
+            </a>
+            <a href="">
+                <div class="box">
+                    <div class="BoxEl1">
+                        <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/pwg0c0snpd6u0mu1edoa" alt="Food Image">
+                    </div>
+                    <div class="BoxEl2">
+                        <h4>Neo's Chinese</h4>
+                        <p>North Indian Punjabi</p>
+                    </div>
+                    <div class="BoxEl3">
+                        <div class="BoxEl3It1">
+                            <img src="star1.png" alt="">
+                            <p>4.4</p>
+                        </div>
+                        <div class="dot">.</div>
+                        <div class="BoxEl3It2">
+                            <p>44 MINS</p>
+                        </div>
+                        <div class="dot">.</div>
+                        <div class="BoxEl3It3">
+                            <p>&#8377;200 FOR TWO</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="BoxEl4">
+                        <img src="tar1.png" alt="">
+                        <p>50% off | Use WELCOME50</p>
+                    </div>
+                </div>
+            </a>
+            <a href="">
+                <div class="box">
+                    <div class="BoxEl1">
+                        <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/pwg0c0snpd6u0mu1edoa" alt="Food Image">
+                    </div>
+                    <div class="BoxEl2">
+                        <h4>Neo's Chinese</h4>
+                        <p>North Indian Punjabi</p>
+                    </div>
+                    <div class="BoxEl3">
+                        <div class="BoxEl3It1">
+                            <img src="star1.png" alt="">
+                            <p>4.4</p>
+                        </div>
+                        <div class="dot">.</div>
+                        <div class="BoxEl3It2">
+                            <p>44 MINS</p>
+                        </div>
+                        <div class="dot">.</div>
+                        <div class="BoxEl3It3">
+                            <p>&#8377;200 FOR TWO</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="BoxEl4">
+                        <img src="tar1.png" alt="">
+                        <p>50% off | Use WELCOME50</p>
+                    </div>
+                </div>
+            </a>
+            <a href="">
+                <div class="box">
+                    <div class="BoxEl1">
+                        <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/pwg0c0snpd6u0mu1edoa" alt="Food Image">
+                    </div>
+                    <div class="BoxEl2">
+                        <h4>Neo's Chinese</h4>
+                        <p>North Indian Punjabi</p>
+                    </div>
+                    <div class="BoxEl3">
+                        <div class="BoxEl3It1">
+                            <img src="star1.png" alt="">
+                            <p>4.4</p>
+                        </div>
+                        <div class="dot">.</div>
+                        <div class="BoxEl3It2">
+                            <p>44 MINS</p>
+                        </div>
+                        <div class="dot">.</div>
+                        <div class="BoxEl3It3">
+                            <p>&#8377;200 FOR TWO</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="BoxEl4">
+                        <img src="tar1.png" alt="">
+                        <p>50% off | Use WELCOME50</p>
+                    </div>
+                </div>
+            </a>
+            <a href="">
+                <div class="box">
+                    <div class="BoxEl1">
+                        <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/pwg0c0snpd6u0mu1edoa" alt="Food Image">
+                    </div>
+                    <div class="BoxEl2">
+                        <h4>Neo's Chinese</h4>
+                        <p>North Indian Punjabi</p>
+                    </div>
+                    <div class="BoxEl3">
+                        <div class="BoxEl3It1">
+                            <img src="star1.png" alt="">
+                            <p>4.4</p>
+                        </div>
+                        <div class="dot">.</div>
+                        <div class="BoxEl3It2">
+                            <p>44 MINS</p>
+                        </div>
+                        <div class="dot">.</div>
+                        <div class="BoxEl3It3">
+                            <p>&#8377;200 FOR TWO</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="BoxEl4">
+                        <img src="tar1.png" alt="">
+                        <p>50% off | Use WELCOME50</p>
+                    </div>
+                </div>
+            </a>
+            <a href="">
+                <div class="box">
+                    <div class="BoxEl1">
+                        <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/pwg0c0snpd6u0mu1edoa" alt="Food Image">
+                    </div>
+                    <div class="BoxEl2">
+                        <h4>Neo's Chinese</h4>
+                        <p>North Indian Punjabi</p>
+                    </div>
+                    <div class="BoxEl3">
+                        <div class="BoxEl3It1">
+                            <img src="star1.png" alt="">
+                            <p>4.4</p>
+                        </div>
+                        <div class="dot">.</div>
+                        <div class="BoxEl3It2">
+                            <p>44 MINS</p>
+                        </div>
+                        <div class="dot">.</div>
+                        <div class="BoxEl3It3">
+                            <p>&#8377;200 FOR TWO</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="BoxEl4">
+                        <img src="tar1.png" alt="">
+                        <p>50% off | Use WELCOME50</p>
+                    </div>
+                </div>
+            </a>
+            <a href="">
+                <div class="box">
+                    <div class="BoxEl1">
+                        <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/pwg0c0snpd6u0mu1edoa" alt="Food Image">
+                    </div>
+                    <div class="BoxEl2">
+                        <h4>Neo's Chinese</h4>
+                        <p>North Indian Punjabi</p>
+                    </div>
+                    <div class="BoxEl3">
+                        <div class="BoxEl3It1">
+                            <img src="star1.png" alt="">
+                            <p>4.4</p>
+                        </div>
+                        <div class="dot">.</div>
+                        <div class="BoxEl3It2">
+                            <p>44 MINS</p>
+                        </div>
+                        <div class="dot">.</div>
+                        <div class="BoxEl3It3">
+                            <p>&#8377;200 FOR TWO</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="BoxEl4">
+                        <img src="tar1.png" alt="">
+                        <p>50% off | Use WELCOME50</p>
+                    </div>
+                </div>
+            </a>
+            <a href="">
+                <div class="box">
+                    <div class="BoxEl1">
+                        <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/pwg0c0snpd6u0mu1edoa" alt="Food Image">
+                    </div>
+                    <div class="BoxEl2">
+                        <h4>Neo's Chinese</h4>
+                        <p>North Indian Punjabi</p>
+                    </div>
+                    <div class="BoxEl3">
+                        <div class="BoxEl3It1">
+                            <img src="star1.png" alt="">
+                            <p>4.4</p>
+                        </div>
+                        <div class="dot">.</div>
+                        <div class="BoxEl3It2">
+                            <p>44 MINS</p>
+                        </div>
+                        <div class="dot">.</div>
+                        <div class="BoxEl3It3">
+                            <p>&#8377;200 FOR TWO</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="BoxEl4">
+                        <img src="tar1.png" alt="">
+                        <p>50% off | Use WELCOME50</p>
+                    </div>
+                </div>
+            </a>
+            
+        </div>
+    </div>
 
 </body>
 
