@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swiggy Offers</title>
+    <Style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            /* border: 2px solid red; */
+            height: 80px;
+        }
+
+        .child2>div>a {
+            text-decoration: none;
+            color: rgb(53, 53, 53);
+        }
+
+        .child2>div>a>p {
+            font-size: 18px;
+        }
+
+        .child1>div>a {
+            text-decoration: none;
+            /* color: rgb(53,53,53); */
+            color: rgb(0, 0, 104);
+            font-weight: bolder;
+        }
+
+        #loc {
+            color: rgb(53, 53, 53);
+            opacity: 0.7;
+        }
+
+        .navEl>a {
+            display: flex;
+            align-items: center;
+        }
+
+        .navEl>a:hover {
+            color: orange;
+        }
+
+        .navEl>a>p:last-child::first-letter {
+            font-weight: bolder;
+        }
+
+        .navEl>a>img {
+            width: 35px;
+            margin-left: 35px;
+        }
+
+        .fa-solid {
+            line-height: 3.6;
+        }
+
+        .fa-regular {
+            line-height: 3.6;
+        }
+
+        .child1 {
+            display: flex;
+            /* border: 2px solid red; */
+            /* justify-content: center; */
+            align-items: center;
+        }
+
+        .child2 {
+            display: flex;
+            /* border: 2px solid red; */
+            align-items: center;
+            /* justify-content: center; */
+
+            width: 48%;
+        }
+
+        .child2>div {
+            margin-right: 58px;
+        }
+
+        .child1 {
+            display: flex;
+            /* border: 2px solid red; */
+            align-items: center;
+            /* justify-content: center; */
+
+            width: 30%;
+        }
+
+        .child1>div {
+            margin-left: 30px;
+        }
+
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-weight: 300;
+            color: #282c3f;
+        }
+
+        h1 {
+            color: orangered;
+        }
+
+        div {
+            display: block;
+        }
+
+        .raj {
+            background-color: #005062;
+            max-width: 100%;
+            margin: 0 auto;
+            color: #fff;
+            height: 300px;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-align: center;
+            align-items: center;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+        }
+
+
+        .offer {
+            font-size: 50px;
+            font-weight: 600;
+            box-sizing: inherit;
+            margin-left: 70px;
+        }
+
+        .para {
+            font-size: 22px;
+            line-height: 1.2;
+            opacity: .8;
+            margin-left: 70px;
+        }
+
+        .log {
+            height: 200px;
+        }
+
+        .start {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+        }
+
+        .res {
+            font-size: 25px;
+            padding: 24px 0 20px;
+            color: black;
+            margin-left: 0px;
+
+
+
+        }
+
+        .reso {
+
+
+            font-size: 25px;
+            padding: 24px 0 20px;
+            color: black;
+            margin-left: 20px;
+
+
+
+        }
+
+
+        .title {
+            color: #282c3f;
+            font-size: 24px;
+            margin-left: 70px;
+            font-weight: 600;
+            padding-top: 59px;
+            font-weight: bold;
+            text-transform: capitalize;
+        }
+    </Style>
+</head>
+
+<body>
+    <nav>
+        <div class="child1">
+            <div class="navEl">
+                <a href="homePage.html"><img src="https://seeklogo.com/images/S/swiggy-logo-8EF8260FA4-seeklogo.com.png"
+                        alt="Swiggy Logo"></a>
+            </div>
+            <div class="navEl">
+                <a href="">
+                    <p>Other&nbsp;&nbsp;&nbsp;</p>
+                    <p id="loc">Pune, Maharashtra, India</p>
+                </a>
+            </div>
+        </div>
+        <div class="child2">
+            <div class="navEl">
+                <a href="">
+                    <i class="fa-solid fa-magnifying-glass">&nbsp;&nbsp;&nbsp;</i>
+                    <p>Search</p>
+                </a>
+            </div>
+            <div class="navEl">
+                <a href=""><i class="fa-solid fa-life-ring">&nbsp;&nbsp;&nbsp;</i>
+                    <p>Offers</p>
+                </a>
+            </div>
+            <div class="navEl">
+                <a href=""><i class="fa-regular fa-circle-question">&nbsp;&nbsp;&nbsp;</i>
+                    <p>Help</p>
+                </a>
+            </div>
+            <div class="navEl">
+                <a href=""><i class="fa-regular fa-user">&nbsp;&nbsp;&nbsp;</i>
+                    <p id="user">Sign in</p>
+                </a>
+            </div>
+            <div class="navEl">
+                <a href=""><i class="fa-solid fa-cart-shopping">&nbsp;&nbsp;&nbsp;</i>
+                    <p>Cart</p>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="raj">
+        <div>
+            <div class="offer"><b>Offers for you</b></div>
+            <div class="para"><b>Explore top deals and offers exclusively for you!</b></div>
+        </div>
+        <div>
+            <img class="log" alt
+                src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/KHu24Gqw_md3ham">
+        </div>
+    </div>
+    <div class="start">
+        <div class="res">Restaurant Offers</div>
+        <div class="reso">Payment offers/Coupons</div>
+    </div>
+    <hr>
+    <div class="new">
+        <h2 class="title">Available Coupons</h2>
+    </div>
+
+    <br><br>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
