@@ -2,7 +2,7 @@ document.querySelector("form").addEventListener("submit",loginFn);
 document.querySelector("#link").addEventListener("click",signupfn);
 
 function signupfn(){
-    window.location.href="signup.html";
+    window.location.href="../Signup/signup.html";
 }
 
 var registeredUsers = JSON.parse(localStorage.getItem("userdata"));

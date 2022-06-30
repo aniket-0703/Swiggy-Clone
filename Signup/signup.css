@@ -1,0 +1,43 @@
+body{
+ background-color: #04AA6D;
+  }
+    #container{
+        display: flex;
+        
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        border: 2px solid black;
+        width: 30%;
+        /* background-color: #04AA6D; */
+        background-color: white;
+    }
+    #register{
+       
+      
+      background-color:red ;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      margin-top: 50px;
+    }
+        
+    
+    h1{
+        text-align: center;
+    }
+    #link{
+        text-decoration: underline;
+        color: green;
+    }
+    #link:hover{
+        cursor: pointer;
+    }
+    input[type=text], input[type=password],input[type=email]{
+        border: 2px solid black ;
+        width: 300px;
+        height: 30px;
+    }
