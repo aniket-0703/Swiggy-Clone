@@ -147,6 +147,7 @@
 
         .log {
             height: 200px;
+            margin-right: 70px;
         }
 
         .start {
@@ -178,6 +179,9 @@
         }
 
 
+
+
+
         .title {
             color: #282c3f;
             font-size: 24px;
@@ -186,6 +190,73 @@
             padding-top: 59px;
             font-weight: bold;
             text-transform: capitalize;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-gap: 15px;
+            column-gap: 30px;
+            row-gap: 40px;
+            padding: 10px;
+            margin-right: 50px;
+            margin-left: 56px;
+        }
+
+        .InContainer {
+            border: 1px solid #e4e2e2;
+            border-radius: 2px;
+            box-sizing: border-box;
+            padding: 0.7vw 1.7vw;
+        }
+
+        .OfferCode {
+            align-items: center;
+            background-color: #fffae6;
+            border: 1px solid #d3d3d3;
+            box-sizing: border-box;
+            display: flex;
+            height: 25px;
+            justify-content: space-between;
+            padding: 15px;
+            width: 140px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-weight: 500;
+        }
+
+        .des {
+            font-weight: 500;
+            font-weight: bold;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .indes {
+            font-weight: 300;
+            color: #686b78;
+        }
+
+        .more {
+            color: #5D8ED5;
+            margin-top: 10px;
+            margin-bottom: 15px;
+            font-weight: 2000;
+            font-size: 15px;
+        }
+
+        .copyCode {
+            border: 1px solid orange;
+            width: 120px;
+            text-align: center;
+            color: orange;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            font-size: 14px;
+
+
         }
     </Style>
 </head>
@@ -246,15 +317,150 @@
         </div>
     </div>
     <div class="start">
-        <div class="res">Restaurant Offers</div>
-        <div class="reso">Payment offers/Coupons</div>
+        <a href="http://127.0.0.1:5500/Swiggy-Clone/offers.html">
+            <div class="res">Restaurant Offers</div>
+        </a>
+        <a href="http://127.0.0.1:5500/Swiggy-Clone/PayPage.html">
+            <div class="reso">Payment offers/Coupons</div>
+        </a>
     </div>
     <hr>
     <div class="new">
         <h2 class="title">Available Coupons</h2>
     </div>
+    <br>
 
-    <br><br>
+
+    <!-- Grid Start -->
+    <div class="grid-container">
+
+
+
+        <div class="InContainer">
+            <div class="OfferCode"><img
+                    src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_40,h_40/rng/md/ads/production/ue5ugfghnrd9qapk6omb"
+                    height="20" width="20" alt="">
+                <p>WELCOME50</p>
+            </div>
+            <h5 class="des">Extra flat ₹30 Paytm cashback</h5>
+            <p class="indes">Pay with Paytm wallet to get an additional cashback of ₹30</p>
+            <h3 class="more">+ MORE</h3>
+            <h5 class="copyCode">COPY CODE</h5>
+
+        </div>
+        <div class="InContainer">
+            <div class="OfferCode"><img
+                    src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_40,h_40/rng/md/ads/production/h7ubmsuwqi37sjtukyzl"
+                    height="20" width="20" alt="">
+                <p>ICICI150</p>
+            </div>
+            <h5 class="des">Get 20% discount using ICICI Bank Cards</h5>
+            <p class="indes">Maximum discount up to ₹150 on orders above ₹600</p>
+            <h3 class="more">+ MORE</h3>
+            <h5 class="copyCode">COPY CODE</h5>
+
+        </div>
+        <div class="InContainer">
+            <div class="OfferCode"><img
+                    src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_40,h_40/rng/md/ads/production/g879izo5vfglvxlrr1wg"
+                    height="20" width="20" alt="">
+                <p>PNBFOOD</p>
+            </div>
+            <h5 class="des">Get 20% discount using Punjab National Bank Cards</h5>
+            <p class="indes">Maximum discount up to ₹125 on orders above ₹299</p>
+            <h3 class="more">+ MORE</h3>
+            <h5 class="copyCode">COPY CODE</h5>
+
+        </div>
+        <div class="InContainer">
+            <div class="OfferCode"><img
+                    src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_40,h_40/rng/md/ads/production/bfdz3xkw1nqs0vczzwih"
+                    height="20" width="20" alt="">
+                <p>HDFC20</p>
+            </div>
+            <h5 class="des">Get 10% discount using HDFC Bank Credit Cards</h5>
+            <p class="indes">Maximum discount up to ₹150 on orders above ₹1250</p>
+            <h3 class="more">+ MORE</h3>
+            <h5 class="copyCode">COPY CODE</h5>
+
+        </div>
+        <div class="InContainer">
+            <div class="OfferCode"><img
+                    src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_40,h_40/rng/md/ads/production/lxxki5aa17ybp6j8xpjs"
+                    height="20" width="20" alt="">
+                <p>CITIFOODIE</p>
+            </div>
+            <h5 class="des">Get 30% discount using Citi Bank World & Infinite Debit Cards</h5>
+            <p class="indes">Maximum discount up to ₹500 on orders above ₹1200</p>
+            <h3 class="more">+ MORE</h3>
+            <h5 class="copyCode">COPY CODE</h5>
+
+        </div>
+        <div class="InContainer">
+            <div class="OfferCode"><img
+                    src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_40,h_40/rng/md/ads/production/rcyxgu4nsvv6tw9updmp"
+                    height="30" width="20" alt="">
+                <p>PAYTMSAVE</p>
+            </div>
+            <h5 class="des">Get assured cashback between ₹25 to ₹100 using Paytm wallet</h5>
+            <p class="indes">Assured cashback between ₹25 to ₹100 on Paytm transactions above ₹399</p>
+            <h3 class="more">+ MORE</h3>
+            <h5 class="copyCode">COPY CODE</h5>
+
+        </div>
+        <div class="InContainer">
+            <div class="OfferCode"><img
+                    src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_40,h_40/rng/md/ads/production/edgxhj148bqzphp4cbcc"
+                    height="20" width="20" alt="">
+                <p>AUBANK100</p>
+            </div>
+            <h5 class="des">Get 25% discount using AU Bank Cards</h5>
+            <p class="indes">Maximum discount up to ₹100 on orders above ₹249</p>
+            <h3 class="more">+ MORE</h3>
+            <h5 class="copyCode">COPY CODE</h5>
+
+        </div>
+        <div class="InContainer">
+            <div class="OfferCode"><img
+                    src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_40,h_40/rng/md/ads/production/xfufgimh3pycialrncwo"
+                    height="20" width="20" alt="">
+                <p>AXIS200</p>
+            </div>
+            <h5 class="des">Get 40% discount using Axis Bank Select Credit Cards</h5>
+            <p class="indes">Maximum discount up to ₹200 on orders above ₹400</p>
+            <h3 class="more">+ MORE</h3>
+            <h5 class="copyCode">COPY CODE</h5>
+
+        </div>
+        <div class="InContainer">
+            <div class="OfferCode"><img
+                    src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_40,h_40/rng/md/ads/production/pumbs2qgp2vh90ntjv4b"
+                    height="20" width="20" alt="">
+                <p>MBK100</p>
+            </div>
+            <h5 class="des">Get up to ₹100 cashback using MobiKwik wallet</h5>
+            <p class="indes"> Cashback up to ₹100 on MobiKwik transactions above ₹199</p>
+            <h3 class="more">+ MORE</h3>
+            <h5 class="copyCode">COPY CODE</h5>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
 
 
 
