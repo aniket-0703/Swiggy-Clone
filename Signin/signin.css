@@ -1,5 +1,7 @@
 body{
-    background-color:white;
+    background-image: linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%);
+    background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+ 
 
 }
 input[type=text], input[type=password] {
@@ -18,13 +20,16 @@ box-sizing: border-box;
     align-items: center;
     margin: auto;
     border-radius: 2px solid black;
+    
 
 }
     #container > form > p{
         color: black;
         font-weight: bold;
     }
-
+form{
+    background-image: linear-gradient(-225deg, #E3FDF5 50%, #FFE6FA 50%);
+}
 #login{
     margin-top: 20px;
     margin-left: 60px;
