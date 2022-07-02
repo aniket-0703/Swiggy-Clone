@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family:  Roboto, sans-serif;
+            margin: 0px;
+        }
+        body{
+            /* height: 100vh; */
+            background: yellow;
+        }
+        h3{
+            color: #809b9d;
+            margin-top: 15px;
+            letter-spacing: 0px;
+            
+        }
+
+        .container{
+            
+            width: 30%;
+            height: 50%;
+            margin: auto;
+            margin-top: 140px;
+            background: #f8f7f3;
+            padding: 30px;
+            border-radius: 10px;
+        }
+        .container{
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            border: 1px solid #f8f7f3;
+        }
+        .form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        input{
+            box-sizing: border-box;
+            margin: 16px 0 0;
+            width: 300px;
+            padding: 16px 8px;
+            padding: 1rem 0.5rem;
+        
+            height: 60px;
+            outline: 0;
+            border: 1px solid #e8e8e3;
+            border-radius: 12px;
+            
+            box-shadow: none;
+            font-size: 18px;
+            background-color: #f8f7f3;
+            line-height: 1.3333333;
+        }
+        button{
+             background: #809b9d;
+            color: #fff;
+            margin: 0 auto;
+            padding: 10px 0px;
+            border: 1px solid #759295;
+            border-radius: 120px;
+            width: 300px;
+        
+            /* font-size: 1.9em; */
+            font-weight: 700;
+            
+            cursor: pointer;
+            
+            margin-top: 20px;
+            
+        }
+        a{
+            text-decoration:none; 
+            color: white;
+             
+        }
+        .signup-btn{
+            margin-top: 30px;
+            
+        }
+        .passh{
+            margin-top: 30px;
+        }
+        h1{
+            letter-spacing: 17px;
+            color: #759295;
+            /* border-bottom: 0.5px dotted #759295; */
+            margin-bottom: 20px;
+        }
+        img{
+            padding: 0px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="" class="form" >
+            <h1>LOGIN</h1>
+            <h3>Enter Username<h3>
+            <input type="text" class="username" placeholder="Enter Username">
+
+            <h3 for="">Enter password</h3>
+            <input type="text" class="pass" placeholder="Enter Password">
+            <img src="https://www.kooapp.com/img/logoKuSolidOutline.svg" alt="" style="width: 70px; margin-top: 20px;">
+            <button type="submit" >LOGIN</button>
+            
+        </form>
+    </div>
+</body>
+<script>
+    document.querySelector(".form").addEventListener("submit",check);
+
+    function check(event) {
+        event.preventDefault();
+        var storedName = localStorage.getItem("name");
+        var storedPw =  localStorage.getItem("password");
+        console.log(storedName);
+
+        var userName = document.querySelector(".username");
+        var pass = document.querySelector(".pass");
+        if(userName.value == storedName && pass.value == storedPw){
+        alert('You are logged in.');
+        location.href = "index.html";
+         }
+         else{
+        alert('Error on login');
+         }
+}
+        
+    
+
+</script>
+</html>

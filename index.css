@@ -1,0 +1,254 @@
+
+html,body{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    background-color:#ffffff;
+    font-family: arial,Helvetica Neue,sans-serif;
+    
+}
+.section-1{
+    height:500px;
+}
+.parent{
+    float:left;
+    height:100%;
+    width:55%;
+}
+.aniket{
+    float:right;
+    height: 100%;
+    width: 75%;
+}
+
+.aniket1{
+    float:right;
+    height: 100%;
+    width: 45%;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width:100%;
+    margin-top: 50px;
+    height:100px;
+}
+.nav-btns{
+    width:60%;
+    display: flex;
+    justify-content: center;
+}
+.login{
+    border:0;
+    background-color: white;
+    padding:10px 30px;
+    color:black;
+    font-weight: bold;
+    font-size: 18px;
+}
+.signup{
+    background-color: black;
+    color: white;
+    border:none;
+    font-weight: bold;
+    font-size: 18px;
+    padding:10px 40px;
+}
+.head{
+    color:black;
+    margin-top:45px;
+    margin-bottom:0;
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.sub-head{
+    color:gray;
+    font-size: 24px;
+    letter-spacing: 2px;
+}
+.flex-row{
+    display: flex;
+    flex-direction: row;
+}
+.search-box{
+    width: 70%;
+    height:60px;
+    border:1px solid #ccc;
+    overflow: hidden;
+}
+.search-btn{
+    width: 20%;
+    border:none;
+    background-color: #fc8019;
+    color:white;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 18px;
+    cursor: pointer;
+}
+.search-input{
+    height:60px;
+    width:70%;
+    border:none;
+    padding-left: 20px;
+    outline:none;
+    font-size: 18px;
+    color:black;
+ 
+}
+
+.locate-me{
+    width:20%;
+    height:80%;
+    margin-left: 10px;
+    border:none;
+    color:gray;
+    font-size: 18px;
+    background-color: white;
+    border-radius: 10px;
+    transition: all 0.5s;
+}
+.locate-me:hover{
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+.city{
+    padding-right:20px;
+    color:gray;
+    font-size: 18px;
+}
+.city:nth-of-type(odd){
+    font-weight: bold;
+}
+
+#section-2{
+    width:100%;
+    height:400px;
+    /* background-color:black; */
+ 
+    background-image: initial;
+    background-position-x: initial;
+    background-position-y: initial;
+    background-size: initial;
+    background-repeat-x: initial;
+    background-repeat-y: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: rgb(43, 30, 22);
+}
+.head-2{
+    color:white;
+    font-size: 28px;
+    font-weight: bold;
+}
+.sub-head-2{
+    color:white;
+    margin:0px 40px;
+    text-align: center;
+}
+#section-3{
+    height:600px;
+}
+footer{
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    padding:20px;
+}
+#info{
+    display: flex;
+    background-color: black;
+    flex-direction: column;
+    justify-content: center;
+} 
+.ani1{
+    background-color: black;
+    color: #ccc;
+    margin-top: 100px;
+    
+}
+.ani2{
+  margin-left: 400px;
+  margin-top: -340px;
+ color: #ccc;
+}
+
+.ani3{
+    margin-left: 700px;
+    margin-top: -160px;
+   color: #ccc;
+  }
+
+  .ani4{
+    margin-left: 950px;
+    margin-top: -300px;
+  }
+  .ani6{
+    margin-top: 100px;
+  }
+  
+  .ani7{
+    margin-left: 400px;
+    margin-top: -1830px;
+  }
+  .ani8{
+    margin-left: 800px;
+    margin-top: -1830px;
+  }
+  .ani9{
+    margin-left: 1200px;
+    margin-top: -1830px;
+  }
+.zoom {
+    /* padding: 50px; */
+    background-color: black;
+    transition: transform .2s;
+      width: 50px;
+      height: 50px;
+    margin: 0 auto;
+  }
+  
+  .zoom:hover {
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.5); 
+  }
+
+  .zoom1 {
+    /* padding: 50px; */
+    background-color: black;
+    transition: transform .2s;
+      width: 50px;
+      height: 50px;
+   
+  }
+  
+  .zoom1:hover {
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.5); 
+  }
+
+
+  #area{
+    background-color: black;
+    margin-bottom: -2000px;
+  }
+
+  li:hover{
+    color: tomato;
+    cursor: pointer;
+    list-style: none;
+  }
+  .new1{
+    border: 1px solid black;
+    background-color: black;
+    color: black;
+  }
+  ul{
+    list-style: none;
+  }
