@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cart</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            width: 100%;
+        }
+
+        #box {
+            /* border: 2px solid red; */
+            /* height: 300px; */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            border-radius: 10px;
+        }
+
+        #box>div {
+            /* border: 2px solid blue; */
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* justify-content: space-around; */
+        }
+
+        #box>div>p {
+            display: block;
+            margin: auto;
+        }
+
+        #box>img {
+            width: 300px;
+            margin-top: 10px;
+        }
+
+        #box>div>div {
+            display: flex;
+            width: 50%;
+            margin-left: auto;
+            /* border: 2px solid red; */
+            display: flex;
+            justify-content: center;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        #box>div>div>button {
+            cursor: pointer;
+            height: 20px;
+        }
+
+        #tt {
+            margin: 40px 0;
+            padding: 20px 20px;
+            border: 2px solid green;
+        }
+
+        #fb {
+            color: white;
+            background-color: red;
+            margin-bottom: 15px;
+            border: 1px solid crimson;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        h1>a{
+            text-decoration: none;
+            color: black;
+        }
+
+        /* #box>div:last-child{
+            border: 2px solid green;
+            width: 40%;
+        } */
+    </style>
+</head>
+
+<body>
+    <!-- cartPage -->
+    <div id="container">
+        <!-- <div id="box">
+            <img src="https://rukminim1.flixcart.com/image/800/960/kthjy4w0/shoe/b/c/6/9-lgl33-adidas-cblack-cblack-shopnk-original-imag6tgy6saguqv2.jpeg?q=50" alt="">
+            <div>
+                <p>8999</p>
+                <div>
+                    <button id="add">+</button>
+                    <p>1</p>
+                    <button id="sub">-</button>
+                </div>
+            </div>
+        </div> -->
+    </div>
+    <h2></h2>
+    <h1><a href="payment.html">Pay Now</a></h1>
+</body>
+
+<script>
+    var cartList = JSON.parse(localStorage.getItem("cartList")) || [];
+    disp(cartList);
+    function disp(data) {
+        document.querySelector("#container").innerText = "";
+        if (data.length == 0) {
+            document.querySelector("h2").innerText = "Your cart is empty!";
+            document.querySelector("h1>a").innerText = "";
+        } else {
+            var total = 0;
+            data.forEach(function (el, index) {
+                // console.log(el);
+                var box = document.createElement("div");
+                box.setAttribute("id", "box");
+                var img = document.createElement("img");
+                img.setAttribute("src", el.img);
+                var p1 = document.createElement("p");
+                p1.innerText = el.name;
+                var div1 = document.createElement("div");
+                var p2 = document.createElement("p");
+                p2.innerText = el.price;
+                var div2 = document.createElement("div");
+                var bt1 = document.createElement("button");
+                bt1.setAttribute("id", "add");
+                bt1.innerText = "+";
+                var p3 = document.createElement("p");
+                // console.log(el.qu);
+                p3.innerText = el.qu;
+                var bt2 = document.createElement("button");
+                bt2.setAttribute("id", "sub");
+                bt2.innerText = "-";
+                // total=total+tot(p2,p3);
+                var fb = document.createElement("button");
+                fb.setAttribute("id", "fb");
+                fb.innerText = "Remove Item";
+                div2.append(bt1, p3, bt2);
+                div1.append(p2, div2);
+                box.append(img, p1, div1, fb);
+                fb.addEventListener("click", function () {
+                    total = del(index)
+                });
+                bt1.addEventListener("click", function () {
+                    el.qu++;
+                    p3.innerText = el.qu;
+                    disp(cartList);
+                    // [p3,total]=add(p2,p3,total);
+                });
+                bt2.addEventListener("click", function () {
+                    if (el.qu > 1) {
+                        el.qu--;
+                    }
+                    p3.innerText = el.qu;
+                    disp(cartList);
+                    // [p3,total]=sub(p2,p3,total)
+                });
+                document.querySelector("#container").append(box);
+                var s = el.price;
+                var q = el.qu;
+                total = total + (s * q);
+                console.log(total, s, q);
+            });
+            var tt = document.querySelector("h2").innerText = "Total = " + total;
+            // tt.innerText=total;
+        }
+    }
+    function del(index) {
+        cartList.splice(index, 1);
+        localStorage.setItem("cartList", JSON.stringify(cartList));
+        disp(cartList);
+        // if(cartList.length==0){
+        //     document.querySelector("#tt").innerText="Total = 0";
+        // }else{
+        //     var a=+p2.innerText;
+        //     var b=+p3.innerText;
+        //     total=total-(a*b);
+        //     document.querySelector("#tt").innerText="Total = "+total;
+        // }
+        // return total;
+    }
+    // function add(p2,p3,total){
+    //     var a=+p2.innerText;
+    //     var b=+p3.innerText;
+    //     total=total+a;
+    //     b++;
+    //     p3.innerText=b;
+    //     console.log(total);
+    //     document.querySelector("#tt").innerText="Total = "+total;
+    //     return [p3,total];
+    // }
+    // function sub(p2,p3,total){
+    //     var a=+p2.innerText;
+    //     var b=+p3.innerText;
+    //     if(b>1){
+    //         b--;
+    //         p3.innerText=b;
+    //         total=total-a;
+    //     }
+    //     console.log(total);
+    //     document.querySelector("#tt").innerText="Total = "+total;
+    //     return [p3,total];
+    // }
+    // function tot(p2,p3){
+    //     var a=+p2.innerText;
+    //     var b=+p3.innerText;
+    //     return a*b;
+    // }
+</script>
+
+</html>
