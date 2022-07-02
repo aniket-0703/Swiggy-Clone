@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <style>
+        form{
+            margin: 50px;
+            /* border: 2px solid red; */
+            width: 35%;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            padding: 30px;
+        }
+        form>label{
+            font-size: 20px;
+            display: block;
+            width: 100%;
+            /* margin-top: 20px; */
+            margin-bottom: -10px;
+        }
+        form>input{
+            height: 25px;
+            width: 98.25%;
+            margin-bottom: 20px;
+        }
+        form>input:last-child{
+            margin-top: 30px;
+            height: 30px;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .cont{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+        }
+        #btn {
+            margin: 20px;
+            background-color: teal;
+            color: white;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 0;
+            padding: 5px 10px;
+        }
+
+        #btn1 {
+            margin: 20px;
+            background-color: teal;
+            color: white;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 0;
+            padding: 5px 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="cont">
+        <form action="">
+            <label for="">Name : </label><br>
+            <input id="na" type="text" value=""><br>
+            <label for="">Card Number : </label><br>
+            <input id="cardNum" type="number" value="" min="1000000000000000" max="9999999999999999"><br>
+            <label for="">CVV Number : </label><br>
+            <input id="cvv" type="number" value="" min="100" max="999"><br>
+            <label for="">Expiry Date : </label><br>
+            <input id="exp" type="date" value="" min="2022-01-01" max="2022-12-31"><br>
+            <input id="sub" type="submit" >
+        </form>
+    </div>
+</body>
+
+<script>
+    var p=document.querySelector("form");
+    p.addEventListener("submit",otp);
+    console.log(p);
+
+    function otp(){
+        document.querySelector(".cont").innerHTML="";
+        var q=document.createElement("p");
+        q.innerText="Enter OTP";
+        var a=document.createElement("input");
+        a.setAttribute("placeholder","Enter OTP");
+        a.setAttribute("type","number");
+        a.setAttribute("value","");
+        a.setAttribute("id","inOTP");
+        var b=document.createElement("button");
+        b.setAttribute("id","btn");
+        b.innerText="Check";
+        b.addEventListener("click",check);
+        var qq=document.createElement("h2");
+        // var z=document.createElement("button");
+        // b.setAttribute("id","btn1");
+        // b.innerText="Back To Home";
+        // b.addEventListener("click",bth);
+        var qq=document.createElement("h2");
+        document.querySelector(".cont").append(q,a,b,qq);
+    }
+
+    function check(){
+        var z=document.querySelector("#inOTP").value;
+        z=z+"";
+        var qq=document.querySelector("h2");
+        if(z=="1234"){
+            qq.innerText="Payment Successfull";
+            window.location.href="homePage.html";
+            var ttt=[];
+            localStorage.removeItem("cartList");
+        }else{
+            qq.innerText="Try Again!";
+        }
+        document.querySelector(".cont").append(qq);
+    }
+
+</script>
+
+</html>

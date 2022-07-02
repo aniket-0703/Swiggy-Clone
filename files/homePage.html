@@ -484,7 +484,7 @@
                 </a>
             </div>
             <div class="navEl">
-                <a href=""><i class="fa-solid fa-cart-shopping">&nbsp;&nbsp;&nbsp;</i>
+                <a href="cart.html"><i class="fa-solid fa-cart-shopping">&nbsp;&nbsp;&nbsp;</i>
                     <p>Cart</p>
                 </a>
             </div>
@@ -825,706 +825,816 @@
 </body>
 
 <script>
+
+    // var tu=JSON.parse(localStorage.getItem("AllUserData"))||[];
+    // tu.forEach(el => {
+        
+    // });
+    // name
+    // mobile
+    // email
+    // password
+
     var arr = [{
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/eiynr8cytghzx2tcqocc",
         name: "La Pinoz Pizza",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 4.4,
         time: 25,
-        price: 30
+        price: 30,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/cgf7qsoqsvfwletamxt4",
         name: "MH 12 Pav Bhaji",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 3.3,
         time: 45,
-        price: 20
+        price: 20,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/rmf8gsxyxtgejfj73dxe",
         name: "Ramsar Bakery",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 2.2,
         time: 15,
-        price: 40
+        price: 40,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/mnhmehdptltqyyvab7f7",
         name: "SAPTRANG COFFEE SHOP",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 4.4,
         time: 35,
-        price: 30
+        price: 30,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/dmglrqh8j4mxemsdejsb",
         name: "Oven Story Pizza",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 3.3,
         time: 55,
-        price: 20
+        price: 20,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/rndbbuntatuzxhyxdq8q",
         name: "Faasos - Wrap and Rolls",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 2.2,
         time: 20,
-        price: 40
+        price: 40,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/mjgogdio8whva5sm76lo",
         name: "KHADYAABRAMANTI",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 4.4,
         time: 40,
-        price: 30
+        price: 30,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/vxf5oi05sinexpmo3pgn",
         name: "Behrouz Biryani",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 3.3,
         time: 10,
-        price: 20
+        price: 20,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/v7yesiasuwzmhfimdfbt",
         name: "Snack Shack",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 2.2,
         time: 30,
-        price: 40
+        price: 40,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/piohreuutzllhqkzf79d",
         name: "McDonald's",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 4.4,
         time: 50,
-        price: 30
-    }, {
+        price: 30,
+        qu:1
+    },{
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/eiynr8cytghzx2tcqocc",
         name: "La Pinoz Pizza",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 4.4,
         time: 25,
-        price: 30
+        price: 30,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/cgf7qsoqsvfwletamxt4",
         name: "MH 12 Pav Bhaji",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 3.3,
         time: 45,
-        price: 20
+        price: 20,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/rmf8gsxyxtgejfj73dxe",
         name: "Ramsar Bakery",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 2.2,
         time: 15,
-        price: 40
+        price: 40,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/mnhmehdptltqyyvab7f7",
         name: "SAPTRANG COFFEE SHOP",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 4.4,
         time: 35,
-        price: 30
+        price: 30,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/dmglrqh8j4mxemsdejsb",
         name: "Oven Story Pizza",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 3.3,
         time: 55,
-        price: 20
+        price: 20,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/rndbbuntatuzxhyxdq8q",
         name: "Faasos - Wrap and Rolls",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 2.2,
         time: 20,
-        price: 40
+        price: 40,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/mjgogdio8whva5sm76lo",
         name: "KHADYAABRAMANTI",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 4.4,
         time: 40,
-        price: 30
+        price: 30,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/vxf5oi05sinexpmo3pgn",
         name: "Behrouz Biryani",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 3.3,
         time: 10,
-        price: 20
+        price: 20,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/v7yesiasuwzmhfimdfbt",
         name: "Snack Shack",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 2.2,
         time: 30,
-        price: 40
+        price: 40,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/piohreuutzllhqkzf79d",
         name: "McDonald's",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 4.4,
         time: 50,
-        price: 30
-    }, {
+        price: 30,
+        qu:1
+    },{
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/eiynr8cytghzx2tcqocc",
         name: "La Pinoz Pizza",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 4.4,
         time: 25,
-        price: 30
+        price: 30,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/cgf7qsoqsvfwletamxt4",
         name: "MH 12 Pav Bhaji",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 3.3,
         time: 45,
-        price: 20
+        price: 20,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/rmf8gsxyxtgejfj73dxe",
         name: "Ramsar Bakery",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 2.2,
         time: 15,
-        price: 40
+        price: 40,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/mnhmehdptltqyyvab7f7",
         name: "SAPTRANG COFFEE SHOP",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 4.4,
         time: 35,
-        price: 30
+        price: 30,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/dmglrqh8j4mxemsdejsb",
         name: "Oven Story Pizza",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 3.3,
         time: 55,
-        price: 20
+        price: 20,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/rndbbuntatuzxhyxdq8q",
         name: "Faasos - Wrap and Rolls",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 2.2,
         time: 20,
-        price: 40
+        price: 40,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/mjgogdio8whva5sm76lo",
         name: "KHADYAABRAMANTI",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 4.4,
         time: 40,
-        price: 30
+        price: 30,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/vxf5oi05sinexpmo3pgn",
         name: "Behrouz Biryani",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 3.3,
         time: 10,
-        price: 20
+        price: 20,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/v7yesiasuwzmhfimdfbt",
         name: "Snack Shack",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 2.2,
         time: 30,
-        price: 40
+        price: 40,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/piohreuutzllhqkzf79d",
         name: "McDonald's",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 4.4,
         time: 50,
-        price: 30
-    }, {
+        price: 30,
+        qu:1
+    },{
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/eiynr8cytghzx2tcqocc",
         name: "La Pinoz Pizza",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 4.4,
         time: 25,
-        price: 30
+        price: 30,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/cgf7qsoqsvfwletamxt4",
         name: "MH 12 Pav Bhaji",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 3.3,
         time: 45,
-        price: 20
+        price: 20,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/rmf8gsxyxtgejfj73dxe",
         name: "Ramsar Bakery",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 2.2,
         time: 15,
-        price: 40
+        price: 40,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/mnhmehdptltqyyvab7f7",
         name: "SAPTRANG COFFEE SHOP",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 4.4,
         time: 35,
-        price: 30
+        price: 30,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/dmglrqh8j4mxemsdejsb",
         name: "Oven Story Pizza",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 3.3,
         time: 55,
-        price: 20
+        price: 20,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/rndbbuntatuzxhyxdq8q",
         name: "Faasos - Wrap and Rolls",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 2.2,
         time: 20,
-        price: 40
+        price: 40,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/mjgogdio8whva5sm76lo",
         name: "KHADYAABRAMANTI",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 4.4,
         time: 40,
-        price: 30
+        price: 30,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/vxf5oi05sinexpmo3pgn",
         name: "Behrouz Biryani",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 3.3,
         time: 10,
-        price: 20
+        price: 20,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/v7yesiasuwzmhfimdfbt",
         name: "Snack Shack",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 2.2,
         time: 30,
-        price: 40
+        price: 40,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/piohreuutzllhqkzf79d",
         name: "McDonald's",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 4.4,
         time: 50,
-        price: 30
-    }, {
+        price: 30,
+        qu:1
+    },{
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/eiynr8cytghzx2tcqocc",
         name: "La Pinoz Pizza",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 4.4,
         time: 25,
-        price: 30
+        price: 30,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/cgf7qsoqsvfwletamxt4",
         name: "MH 12 Pav Bhaji",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 3.3,
         time: 45,
-        price: 20
+        price: 20,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/rmf8gsxyxtgejfj73dxe",
         name: "Ramsar Bakery",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 2.2,
         time: 15,
-        price: 40
+        price: 40,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/mnhmehdptltqyyvab7f7",
         name: "SAPTRANG COFFEE SHOP",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 4.4,
         time: 35,
-        price: 30
+        price: 30,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/dmglrqh8j4mxemsdejsb",
         name: "Oven Story Pizza",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 3.3,
         time: 55,
-        price: 20
+        price: 20,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/rndbbuntatuzxhyxdq8q",
         name: "Faasos - Wrap and Rolls",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 2.2,
         time: 20,
-        price: 40
+        price: 40,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/mjgogdio8whva5sm76lo",
         name: "KHADYAABRAMANTI",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 4.4,
         time: 40,
-        price: 30
+        price: 30,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/vxf5oi05sinexpmo3pgn",
         name: "Behrouz Biryani",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 3.3,
         time: 10,
-        price: 20
+        price: 20,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/v7yesiasuwzmhfimdfbt",
         name: "Snack Shack",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 2.2,
         time: 30,
-        price: 40
+        price: 40,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/piohreuutzllhqkzf79d",
         name: "McDonald's",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 4.4,
         time: 50,
-        price: 30
-    }, {
+        price: 30,
+        qu:1
+    },{
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/eiynr8cytghzx2tcqocc",
         name: "La Pinoz Pizza",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 4.4,
         time: 25,
-        price: 30
+        price: 30,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/cgf7qsoqsvfwletamxt4",
         name: "MH 12 Pav Bhaji",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 3.3,
         time: 45,
-        price: 20
+        price: 20,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/rmf8gsxyxtgejfj73dxe",
         name: "Ramsar Bakery",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 2.2,
         time: 15,
-        price: 40
+        price: 40,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/mnhmehdptltqyyvab7f7",
         name: "SAPTRANG COFFEE SHOP",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 4.4,
         time: 35,
-        price: 30
+        price: 30,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/dmglrqh8j4mxemsdejsb",
         name: "Oven Story Pizza",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 3.3,
         time: 55,
-        price: 20
+        price: 20,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/rndbbuntatuzxhyxdq8q",
         name: "Faasos - Wrap and Rolls",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 2.2,
         time: 20,
-        price: 40
+        price: 40,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/mjgogdio8whva5sm76lo",
         name: "KHADYAABRAMANTI",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 4.4,
         time: 40,
-        price: 30
+        price: 30,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/vxf5oi05sinexpmo3pgn",
         name: "Behrouz Biryani",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 3.3,
         time: 10,
-        price: 20
+        price: 20,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/v7yesiasuwzmhfimdfbt",
         name: "Snack Shack",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 2.2,
         time: 30,
-        price: 40
+        price: 40,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/piohreuutzllhqkzf79d",
         name: "McDonald's",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 4.4,
         time: 50,
-        price: 30
-    }, {
+        price: 30,
+        qu:1
+    },{
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/eiynr8cytghzx2tcqocc",
         name: "La Pinoz Pizza",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 4.4,
         time: 25,
-        price: 30
+        price: 30,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/cgf7qsoqsvfwletamxt4",
         name: "MH 12 Pav Bhaji",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 3.3,
         time: 45,
-        price: 20
+        price: 20,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/rmf8gsxyxtgejfj73dxe",
         name: "Ramsar Bakery",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 2.2,
         time: 15,
-        price: 40
+        price: 40,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/mnhmehdptltqyyvab7f7",
         name: "SAPTRANG COFFEE SHOP",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 4.4,
         time: 35,
-        price: 30
+        price: 30,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/dmglrqh8j4mxemsdejsb",
         name: "Oven Story Pizza",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 3.3,
         time: 55,
-        price: 20
+        price: 20,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/rndbbuntatuzxhyxdq8q",
         name: "Faasos - Wrap and Rolls",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 2.2,
         time: 20,
-        price: 40
+        price: 40,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/mjgogdio8whva5sm76lo",
         name: "KHADYAABRAMANTI",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 4.4,
         time: 40,
-        price: 30
+        price: 30,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/vxf5oi05sinexpmo3pgn",
         name: "Behrouz Biryani",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 3.3,
         time: 10,
-        price: 20
+        price: 20,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/v7yesiasuwzmhfimdfbt",
         name: "Snack Shack",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 2.2,
         time: 30,
-        price: 40
+        price: 40,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/piohreuutzllhqkzf79d",
         name: "McDonald's",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 4.4,
         time: 50,
-        price: 30
-    }, {
+        price: 30,
+        qu:1
+    },{
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/eiynr8cytghzx2tcqocc",
         name: "La Pinoz Pizza",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 4.4,
         time: 25,
-        price: 30
+        price: 30,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/cgf7qsoqsvfwletamxt4",
         name: "MH 12 Pav Bhaji",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 3.3,
         time: 45,
-        price: 20
+        price: 20,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/rmf8gsxyxtgejfj73dxe",
         name: "Ramsar Bakery",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 2.2,
         time: 15,
-        price: 40
+        price: 40,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/mnhmehdptltqyyvab7f7",
         name: "SAPTRANG COFFEE SHOP",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 4.4,
         time: 35,
-        price: 30
+        price: 30,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/dmglrqh8j4mxemsdejsb",
         name: "Oven Story Pizza",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 3.3,
         time: 55,
-        price: 20
+        price: 20,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/rndbbuntatuzxhyxdq8q",
         name: "Faasos - Wrap and Rolls",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 2.2,
         time: 20,
-        price: 40
+        price: 40,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/mjgogdio8whva5sm76lo",
         name: "KHADYAABRAMANTI",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 4.4,
         time: 40,
-        price: 30
+        price: 30,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/vxf5oi05sinexpmo3pgn",
         name: "Behrouz Biryani",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 3.3,
         time: 10,
-        price: 20
+        price: 20,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/v7yesiasuwzmhfimdfbt",
         name: "Snack Shack",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 2.2,
         time: 30,
-        price: 40
+        price: 40,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/piohreuutzllhqkzf79d",
         name: "McDonald's",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 4.4,
         time: 50,
-        price: 30
-    }, {
+        price: 30,
+        qu:1
+    },{
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/eiynr8cytghzx2tcqocc",
         name: "La Pinoz Pizza",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 4.4,
         time: 25,
-        price: 30
+        price: 30,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/cgf7qsoqsvfwletamxt4",
         name: "MH 12 Pav Bhaji",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 3.3,
         time: 45,
-        price: 20
+        price: 20,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/rmf8gsxyxtgejfj73dxe",
         name: "Ramsar Bakery",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 2.2,
         time: 15,
-        price: 40
+        price: 40,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/mnhmehdptltqyyvab7f7",
         name: "SAPTRANG COFFEE SHOP",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 4.4,
         time: 35,
-        price: 30
+        price: 30,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/dmglrqh8j4mxemsdejsb",
         name: "Oven Story Pizza",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 3.3,
         time: 55,
-        price: 20
+        price: 20,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/rndbbuntatuzxhyxdq8q",
         name: "Faasos - Wrap and Rolls",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 2.2,
         time: 20,
-        price: 40
+        price: 40,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/mjgogdio8whva5sm76lo",
         name: "KHADYAABRAMANTI",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 4.4,
         time: 40,
-        price: 30
+        price: 30,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/vxf5oi05sinexpmo3pgn",
         name: "Behrouz Biryani",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 3.3,
         time: 10,
-        price: 20
+        price: 20,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/v7yesiasuwzmhfimdfbt",
         name: "Snack Shack",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 2.2,
         time: 30,
-        price: 40
+        price: 40,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/piohreuutzllhqkzf79d",
         name: "McDonald's",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 4.4,
         time: 50,
-        price: 30
-    }, {
+        price: 30,
+        qu:1
+    },{
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/eiynr8cytghzx2tcqocc",
         name: "La Pinoz Pizza",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 4.4,
         time: 25,
-        price: 30
+        price: 30,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/cgf7qsoqsvfwletamxt4",
         name: "MH 12 Pav Bhaji",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 3.3,
         time: 45,
-        price: 20
+        price: 20,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/rmf8gsxyxtgejfj73dxe",
         name: "Ramsar Bakery",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 2.2,
         time: 15,
-        price: 40
+        price: 40,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/mnhmehdptltqyyvab7f7",
         name: "SAPTRANG COFFEE SHOP",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 4.4,
         time: 35,
-        price: 30
+        price: 30,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/dmglrqh8j4mxemsdejsb",
         name: "Oven Story Pizza",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 3.3,
         time: 55,
-        price: 20
+        price: 20,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/rndbbuntatuzxhyxdq8q",
         name: "Faasos - Wrap and Rolls",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 2.2,
         time: 20,
-        price: 40
+        price: 40,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/mjgogdio8whva5sm76lo",
         name: "KHADYAABRAMANTI",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 4.4,
         time: 40,
-        price: 30
+        price: 30,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/vxf5oi05sinexpmo3pgn",
         name: "Behrouz Biryani",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 3.3,
         time: 10,
-        price: 20
+        price: 20,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/v7yesiasuwzmhfimdfbt",
         name: "Snack Shack",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 2.2,
         time: 30,
-        price: 40
+        price: 40,
+        qu:1
     }, {
         img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/piohreuutzllhqkzf79d",
         name: "McDonald's",
         abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
         rating: 4.4,
         time: 50,
-        price: 30
+        price: 30,
+        qu:1
     }]
 
     // func(arr,"r");
