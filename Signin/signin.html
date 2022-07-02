@@ -1,32 +1,63 @@
 <!DOCTYPE html>
+<!-- === Coding by CodingLab | www.codinglabweb.com === -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign in</title>
-    <link rel="stylesheet" href="signin.css">
-   
+    
+    <!-- ===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+<link rel="stylesheet" href="signin.css">
+    <!-- ===== CSS ===== -->
+    <link rel="stylesheet" href="style.css">
+         
+    <!--<title>Login & Registration Form</title>-->
 </head>
 <body>
-    <h1>Login</h1>
-    <div id="container">
-        <form>
-            <p>Email</p>
-            <input type="text" id="email" type="email" placeholder="Enter your email" required>
-            <p>Password</p>
-            <input type="password" id="password" placeholder="Password" required>
-            <br>
-            <input id="login" type="submit" value="Login">
+    
+    <div class="container">
+        <div class="forms">
+            <div class="form login">
+                <span class="title">Login</span>
 
-            <br>
-            <br>
-            <br>
-            <p><b>Create new account </b><a id="link"><b>Signup</b></a></p>
-        </form>
+                <form >
+                    <div class="input-field">
+                        <input id ="email"type="text" placeholder="Enter your email" required>
+                        <i class="uil uil-envelope icon"></i>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" class="password" id="password" placeholder="Enter your password" required>
+                        <i class="uil uil-lock icon"></i>
+                        <!-- <i class="uil uil-eye-slash showHidePw"></i> -->
+                    </div>
+
+                    <div class="checkbox-text">
+                        <div class="checkbox-content">
+                            <input type="checkbox" id="logCheck">
+                            <label for="logCheck" class="text">Remember me</label>
+                        </div>
+                        
+                        <a href="#" class="text">Forgot password?</a>
+                    </div>
+
+                    <div class="input-field button">
+                        <input id="login" type="submit" value="Login">
+                    </div>
+                </form>
+                <!-- <a href="homePage.html"><button id="getIn">Get In</button></a> -->
+
+                <div class="login-signup">
+                    <span class="text">Create Account?
+                        <a href="#" id="link">Signup Now</a>
+                    </span>
+                </div>
+            </div>
+        </div>
     </div>
-</body>
 
-<script src="signin.js"> </script>
 
-</html>
+
+
+    
+    <script src="signin.js"></script>
