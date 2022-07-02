@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swiggy Offers</title>
+    <Style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            /* border: 2px solid red; */
+            height: 80px;
+        }
+
+        .child2>div>a {
+            text-decoration: none;
+            color: rgb(53, 53, 53);
+        }
+
+        .child2>div>a>p {
+            font-size: 18px;
+        }
+
+        .child1>div>a {
+            text-decoration: none;
+            /* color: rgb(53,53,53); */
+            color: rgb(0, 0, 104);
+            font-weight: bolder;
+        }
+
+        #loc {
+            color: rgb(53, 53, 53);
+            opacity: 0.7;
+        }
+
+        .navEl>a {
+            display: flex;
+            align-items: center;
+        }
+
+        .navEl>a:hover {
+            color: orange;
+        }
+
+        .navEl>a>p:last-child::first-letter {
+            font-weight: bolder;
+        }
+
+        .navEl>a>img {
+            width: 35px;
+            margin-left: 35px;
+        }
+
+        .fa-solid {
+            line-height: 3.6;
+        }
+
+        .fa-regular {
+            line-height: 3.6;
+        }
+
+        .child1 {
+            display: flex;
+            /* border: 2px solid red; */
+            /* justify-content: center; */
+            align-items: center;
+        }
+
+        .child2 {
+            display: flex;
+            /* border: 2px solid red; */
+            align-items: center;
+            /* justify-content: center; */
+
+            width: 48%;
+        }
+
+        .child2>div {
+            margin-right: 58px;
+        }
+
+        .child1 {
+            display: flex;
+            /* border: 2px solid red; */
+            align-items: center;
+            /* justify-content: center; */
+
+            width: 30%;
+        }
+
+        .child1>div {
+            margin-left: 30px;
+        }
+
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-weight: 300;
+            color: #282c3f;
+        }
+
+        h1 {
+            color: orangered;
+        }
+
+        div {
+            display: block;
+        }
+
+        .raj {
+            background-color: #005062;
+            max-width: 100%;
+            margin: 0 auto;
+            color: #fff;
+            height: 300px;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-align: center;
+            align-items: center;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+        }
+
+
+        .offer {
+            font-size: 50px;
+            font-weight: 600;
+            box-sizing: inherit;
+            margin-left: 70px;
+        }
+
+        .para {
+            font-size: 22px;
+            line-height: 1.2;
+            opacity: .8;
+            margin-left: 70px;
+        }
+
+        .log {
+            height: 200px;
+            margin-right: 70px;
+        }
+
+        .start {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+        }
+
+        .res {
+            font-size: 25px;
+            padding: 24px 0 20px;
+            color: black;
+            margin-left: 0px;
+
+
+
+        }
+
+        .reso {
+
+
+            font-size: 25px;
+            padding: 24px 0 20px;
+            color: black;
+            margin-left: 20px;
+
+
+
+        }
+
+        .new {
+            font-size: 24px;
+            margin-left: 70px;
+            font-weight: 600;
+            padding-top: 59px;
+
+        }
+
+        .new1 {
+            font-size: 16px;
+            margin-left: 70px;
+            color: #93959f;
+            margin-top: 5px;
+
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .GridContainer {
+            width: 100%;
+            padding-top: 20px;
+        }
+
+        .GridContainer>.FoodContainer {
+            width: 93.5%;
+            margin: auto;
+            display: grid;
+            row-gap: 15px;
+            column-gap: 15px;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .GridContainer>.FoodContainer>a:hover {
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+        }
+
+        .GridContainer>.FoodContainer>a>.Foodbox {
+
+            padding: 20px 0;
+        }
+
+        .GridContainer>.FoodContainer>a>.Foodbox>.BoxEl1 {
+
+            width: 254px;
+            margin: auto;
+
+        }
+
+        .GridContainer>.FoodContainer>a>.Foodbox>.BoxEl2 {
+
+            width: 85%;
+            margin: auto;
+            margin-top: 15px;
+        }
+
+        .GridContainer>.FoodContainer>a>.Foodbox>.BoxEl2>h4 {
+            font-size: 17px;
+        }
+
+        .GridContainer>.FoodContainer>a>.Foodbox>.BoxEl2>p {
+            font-size: 13px;
+            color: #686b78;
+        }
+
+        .GridContainer>.FoodContainer>a>.Foodbox>.BoxEl3 {
+
+            width: 85%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+
+        .GridContainer>.FoodContainer>a>.Foodbox>.BoxEl3>.BoxEl3It1 {
+            background-color: #48c479;
+            display: flex;
+            width: 43px;
+            justify-content: center;
+            align-items: center;
+            height: 20px;
+            justify-content: space-evenly;
+
+        }
+
+        .GridContainer>.FoodContainer>a>.Foodbox>.BoxEl3>.BoxEl3It2>p {
+            padding-top: 4.5px;
+            font-size: 12px;
+            font-weight: 400;
+            color: #535665;
+        }
+
+        .GridContainer>.FoodContainer>a>.Foodbox>.BoxEl3>.BoxEl3It3>p {
+            padding-top: 4.5px;
+            font-size: 12px;
+            font-weight: 400;
+            color: #535665;
+        }
+
+        .GridContainer>.FoodContainer>a>.Foodbox>.BoxEl3>.BoxEl3It1>p {
+            padding-top: 4.5px;
+            font-size: 12px;
+            font-weight: 400;
+            color: white;
+        }
+
+        .GridContainer>.FoodContainer>a>.Foodbox>.BoxEl3>.dot {
+            font-weight: 600;
+            padding-bottom: 6px;
+        }
+
+        .GridContainer>.FoodContainer>a>.Foodbox>.BoxEl3>.BoxEl3It1>img {
+            width: 12px;
+            height: 12px;
+        }
+
+        .GridContainer>.FoodContainer>a>.Foodbox>.BoxEl4 {
+            /* border: 2px solid purple; */
+            width: 85%;
+            margin: auto;
+            display: flex;
+            margin-top: 10px;
+        }
+
+        .GridContainer>.FoodContainer>a>.Foodbox>.BoxEl4>img {
+            margin-right: 4px;
+            height: 20px;
+        }
+
+        .GridContainer>.FoodContainer>a>.Foodbox>.BoxEl4>p {
+            margin-top: 2px;
+            color: #8a584b;
+            font-size: 15px;
+            font-weight: 400;
+        }
+
+        .GridContainer>.FoodContainer>a>.Foodbox>.BoxEl1>img {
+            width: 254px;
+            margin: auto;
+        }
+
+        .GridContainer>.FoodContainer>a>.Foodbox> {
+            width: 100%;
+        }
+
+        hr {
+            width: 254px;
+            margin: auto;
+
+        }
+
+        .firstHr {
+            width: 100%;
+        }
+    </Style>
+</head>
+
+<body>
+    <!-- Navigation start -->
+    <nav>
+        <div class="child1">
+            <div class="navEl">
+                <a href="homePage.html"><img src="https://seeklogo.com/images/S/swiggy-logo-8EF8260FA4-seeklogo.com.png"
+                        alt="Swiggy Logo"></a>
+            </div>
+            <div class="navEl">
+                <a href="">
+                    <p>Other&nbsp;&nbsp;&nbsp;</p>
+                    <p id="loc">Pune, Maharashtra, India</p>
+                </a>
+            </div>
+        </div>
+        <div class="child2">
+            <div class="navEl">
+                <a href="">
+                    <i class="fa-solid fa-magnifying-glass">&nbsp;&nbsp;&nbsp;</i>
+                    <p>Search</p>
+                </a>
+            </div>
+            <div class="navEl">
+                <a href=""><i class="fa-solid fa-life-ring">&nbsp;&nbsp;&nbsp;</i>
+                    <p>Offers</p>
+                </a>
+            </div>
+            <div class="navEl">
+                <a href=""><i class="fa-regular fa-circle-question">&nbsp;&nbsp;&nbsp;</i>
+                    <p>Help</p>
+                </a>
+            </div>
+            <div class="navEl">
+                <a href=""><i class="fa-regular fa-user">&nbsp;&nbsp;&nbsp;</i>
+                    <p id="user">Sign in</p>
+                </a>
+            </div>
+            <div class="navEl">
+                <a href=""><i class="fa-solid fa-cart-shopping">&nbsp;&nbsp;&nbsp;</i>
+                    <p>Cart</p>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <!-- Navigation end -->
+
+    <!-- Upper Page Start -->
+
+    <div class="raj">
+        <div>
+            <div class="offer"><b>Offers for you</b></div>
+            <div class="para"><b>Explore top deals and offers exclusively for you!</b></div>
+        </div>
+        <div>
+            <img class="log" alt
+                src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/KHu24Gqw_md3ham">
+        </div>
+    </div>
+    <!-- Upper Page End -->
+
+    <div class="start">
+        <a href="http://127.0.0.1:5500/Swiggy-Clone/offers.html">
+            <div class="res">Restaurant Offers</div>
+        </a>
+        <a href="http://127.0.0.1:5500/Swiggy-Clone/PayPage.html">
+            <div class="reso">Payment offers/Coupons</div>
+        </a>
+    </div>
+    <hr class="firstHr">
+    <div class="new">All offers (12)</div>
+    <div class="new1">All offers and deals, from restaurants near you</div>
+    <br><br>
+    <!-- Grid -->
+    <div class="GridContainer">
+        <div class="FoodContainer">
+            <a href="">
+                <div class="Foodbox">
+                    <div class="BoxEl1">
+                        <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/ssejrntihem78rhxknae"
+                            alt="Food Image">
+                    </div>
+                    <div class="BoxEl2">
+                        <h4>Burger king</h4>
+                        <p>American, Fast Food</p>
+                    </div>
+                    <div class="BoxEl3">
+                        <div class="BoxEl3It1">
+                            <img src="https://github.com/aniket-0703/Swiggy-Clone/blob/homePage/star1.png?raw=true"
+                                alt="">
+                            <p>4.4</p>
+                        </div>
+                        <div class="dot">.</div>
+                        <div class="BoxEl3It2">
+                            <p>44 MINS</p>
+                        </div>
+                        <div class="dot">.</div>
+                        <div class="BoxEl3It3">
+                            <p>&#8377;200 FOR TWO</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="BoxEl4">
+                        <img src="https://github.com/aniket-0703/Swiggy-Clone/blob/homePage/tar1.png?raw=true" alt="">
+                        <p>50% off | Use WELCOME50</p>
+                    </div>
+                </div>
+            </a>
+            <a href="">
+                <div class="Foodbox">
+                    <div class="BoxEl1">
+                        <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/mh20hpdflwb783axmwfp"
+                            alt="Food Image">
+                    </div>
+                    <div class="BoxEl2">
+                        <h4>Subway</h4>
+                        <p>Healthy Food, Salads</p>
+                    </div>
+                    <div class="BoxEl3">
+                        <div class="BoxEl3It1">
+                            <img src="https://github.com/aniket-0703/Swiggy-Clone/blob/homePage/star1.png?raw=true"
+                                alt="">
+                            <p>4.3</p>
+                        </div>
+                        <div class="dot">.</div>
+                        <div class="BoxEl3It2">
+                            <p>40 MINS</p>
+                        </div>
+                        <div class="dot">.</div>
+                        <div class="BoxEl3It3">
+                            <p>&#8377;350 FOR TWO</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="BoxEl4">
+                        <img src="https://github.com/aniket-0703/Swiggy-Clone/blob/homePage/tar1.png?raw=true" alt="">
+                        <p>50% off | Use WELCOME50</p>
+                    </div>
+                </div>
+            </a>
+            <a href="">
+                <div class="Foodbox">
+                    <div class="BoxEl1">
+                        <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/p9neualm2aevnplfwufm"
+                            alt="Food Image">
+                    </div>
+                    <div class="BoxEl2">
+                        <h4>Grace Foods</h4>
+                        <p>Thalis, North Indian</p>
+                    </div>
+                    <div class="BoxEl3">
+                        <div class="BoxEl3It1">
+                            <img src="https://github.com/aniket-0703/Swiggy-Clone/blob/homePage/star1.png?raw=true"
+                                alt="">
+                            <p>4.1</p>
+                        </div>
+                        <div class="dot">.</div>
+                        <div class="BoxEl3It2">
+                            <p>37 MINS</p>
+                        </div>
+                        <div class="dot">.</div>
+                        <div class="BoxEl3It3">
+                            <p>&#8377;200 FOR TWO</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="BoxEl4">
+                        <img src="https://github.com/aniket-0703/Swiggy-Clone/blob/homePage/tar1.png?raw=true" alt="">
+                        <p>50% off | Use WELCOME50</p>
+                    </div>
+                </div>
+            </a>
+            <a href="">
+                <div class="Foodbox">
+                    <div class="BoxEl1">
+                        <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/sc86aemjzooslj0ph11n"
+                            alt="Food Image">
+                    </div>
+                    <div class="BoxEl2">
+                        <h4>Jain Family Restaurant</h4>
+                        <p>North Indian, Thalis</p>
+                    </div>
+                    <div class="BoxEl3">
+                        <div class="BoxEl3It1">
+                            <img src="https://github.com/aniket-0703/Swiggy-Clone/blob/homePage/star1.png?raw=true"
+                                alt="">
+                            <p>4.0</p>
+                        </div>
+                        <div class="dot">.</div>
+                        <div class="BoxEl3It2">
+                            <p>39 MINS</p>
+                        </div>
+                        <div class="dot">.</div>
+                        <div class="BoxEl3It3">
+                            <p>&#8377;270 FOR TWO</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="BoxEl4">
+                        <img src="https://github.com/aniket-0703/Swiggy-Clone/blob/homePage/tar1.png?raw=true" alt="">
+                        <p>60% off | Use TRYNEW</p>
+                    </div>
+                </div>
+            </a>
+            <a href="">
+                <div class="Foodbox">
+                    <div class="BoxEl1">
+                        <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/gmen6ql7yxrg678gyxil"
+                            alt="Food Image">
+                    </div>
+                    <div class="BoxEl2">
+                        <h4>Masala Darbar - Lashkar</h4>
+                        <p>Indian, Spicy Food</p>
+                    </div>
+                    <div class="BoxEl3">
+                        <div class="BoxEl3It1">
+                            <img src="https://github.com/aniket-0703/Swiggy-Clone/blob/homePage/star1.png?raw=true"
+                                alt="">
+                            <p>4.4</p>
+                        </div>
+                        <div class="dot">.</div>
+                        <div class="BoxEl3It2">
+                            <p>44 MINS</p>
+                        </div>
+                        <div class="dot">.</div>
+                        <div class="BoxEl3It3">
+                            <p>&#8377;400 FOR TWO</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="BoxEl4">
+                        <img src="https://github.com/aniket-0703/Swiggy-Clone/blob/homePage/tar1.png?raw=true" alt="">
+                        <p>30% off | Use TRYNEW</p>
+                    </div>
+                </div>
+            </a>
+            <a href="">
+                <div class="Foodbox">
+                    <div class="BoxEl1">
+                        <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/nej4arbsujulraqjvoxs"
+                            alt="Food Image">
+                    </div>
+                    <div class="BoxEl2">
+                        <h4>Hangout Cafe</h4>
+                        <p>Continental, Italian</p>
+                    </div>
+                    <div class="BoxEl3">
+                        <div class="BoxEl3It1">
+                            <img src="https://github.com/aniket-0703/Swiggy-Clone/blob/homePage/star1.png?raw=true"
+                                alt="">
+                            <p>4.7</p>
+                        </div>
+                        <div class="dot">.</div>
+                        <div class="BoxEl3It2">
+                            <p>25 MINS</p>
+                        </div>
+                        <div class="dot">.</div>
+                        <div class="BoxEl3It3">
+                            <p>&#8377;500 FOR TWO</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="BoxEl4">
+                        <img src="https://github.com/aniket-0703/Swiggy-Clone/blob/homePage/tar1.png?raw=true" alt="">
+                        <p>60% off | Use SWIGGY60</p>
+                    </div>
+                </div>
+            </a>
+            <a href="">
+                <div class="Foodbox">
+                    <div class="BoxEl1">
+                        <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/jllzsj0vy3vrgvmnvrzf"
+                            alt="Food Image">
+                    </div>
+                    <div class="BoxEl2">
+                        <h4>Biryani By Kilo</h4>
+                        <p>Biryani, Mughlai</p>
+                    </div>
+                    <div class="BoxEl3">
+                        <div class="BoxEl3It1">
+                            <img src="https://github.com/aniket-0703/Swiggy-Clone/blob/homePage/star1.png?raw=true"
+                                alt="">
+                            <p>4.8</p>
+                        </div>
+                        <div class="dot">.</div>
+                        <div class="BoxEl3It2">
+                            <p>55 MINS</p>
+                        </div>
+                        <div class="dot">.</div>
+                        <div class="BoxEl3It3">
+                            <p>&#8377;700 FOR TWO</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="BoxEl4">
+                        <img src="https://github.com/aniket-0703/Swiggy-Clone/blob/homePage/tar1.png?raw=true" alt="">
+                        <p>20% off | Use VISA DEBIT CARD</p>
+                    </div>
+                </div>
+            </a>
+            <a href="">
+                <div class="Foodbox">
+                    <div class="BoxEl1">
+                        <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/kn7wcb7wnlka9a3kouwt"
+                            alt="Food Image">
+                    </div>
+                    <div class="BoxEl2">
+                        <h4>Foodiyapa</h4>
+                        <p>North Indian, Punjabi</p>
+                    </div>
+                    <div class="BoxEl3">
+                        <div class="BoxEl3It1">
+                            <img src="https://github.com/aniket-0703/Swiggy-Clone/blob/homePage/star1.png?raw=true"
+                                alt="">
+                            <p>4.2</p>
+                        </div>
+                        <div class="dot">.</div>
+                        <div class="BoxEl3It2">
+                            <p>53MINS</p>
+                        </div>
+                        <div class="dot">.</div>
+                        <div class="BoxEl3It3">
+                            <p>&#8377;150 FOR ONE</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="BoxEl4">
+                        <img src="https://github.com/aniket-0703/Swiggy-Clone/blob/homePage/tar1.png?raw=true" alt="">
+                        <p>60% off | Use SWIGGY60</p>
+                    </div>
+                </div>
+            </a>
+            <a href="">
+                <div class="Foodbox">
+                    <div class="BoxEl1">
+                        <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/yzhfmuo1bwnru2hrrtop"
+                            alt="Food Image">
+                    </div>
+                    <div class="BoxEl2">
+                        <h4>Panchvati Gaurav</h4>
+                        <p>Rajasthani, Dal Bati</p>
+                    </div>
+                    <div class="BoxEl3">
+                        <div class="BoxEl3It1">
+                            <img src="https://github.com/aniket-0703/Swiggy-Clone/blob/homePage/star1.png?raw=true"
+                                alt="">
+                            <p>4.3</p>
+                        </div>
+                        <div class="dot">.</div>
+                        <div class="BoxEl3It2">
+                            <p>24 MINS</p>
+                        </div>
+                        <div class="dot">.</div>
+                        <div class="BoxEl3It3">
+                            <p>&#8377;399 FOR TWO</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="BoxEl4">
+                        <img src="https://github.com/aniket-0703/Swiggy-Clone/blob/homePage/tar1.png?raw=true" alt="">
+                        <p>10% off | Use MASTER CARD</p>
+                    </div>
+                </div>
+            </a>
+            <a href="">
+                <div class="Foodbox">
+                    <div class="BoxEl1">
+                        <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/l0nayu7eit9ubcwil1o4"
+                            alt="Food Image">
+                    </div>
+                    <div class="BoxEl2">
+                        <h4>Momo Adda</h4>
+                        <p>Chinese, Snacks</p>
+                    </div>
+                    <div class="BoxEl3">
+                        <div class="BoxEl3It1">
+                            <img src="https://github.com/aniket-0703/Swiggy-Clone/blob/homePage/star1.png?raw=true"
+                                alt="">
+                            <p>4.4</p>
+                        </div>
+                        <div class="dot">.</div>
+                        <div class="BoxEl3It2">
+                            <p>35 MINS</p>
+                        </div>
+                        <div class="dot">.</div>
+                        <div class="BoxEl3It3">
+                            <p>&#8377;200 FOR TWO</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="BoxEl4">
+                        <img src="https://github.com/aniket-0703/Swiggy-Clone/blob/homePage/tar1.png?raw=true" alt="">
+                        <p>30% off | Use WELCOME30</p>
+                    </div>
+                </div>
+            </a>
+            <a href="">
+                <div class="Foodbox">
+                    <div class="BoxEl1">
+                        <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/oysjemhzsjt1fbg08r3r"
+                            alt="Food Image">
+                    </div>
+                    <div class="BoxEl2">
+                        <h4>Bakeology Eggless Bakery</h4>
+                        <p>Bakery, Desserts</p>
+                    </div>
+                    <div class="BoxEl3">
+                        <div class="BoxEl3It1">
+                            <img src="https://github.com/aniket-0703/Swiggy-Clone/blob/homePage/star1.png?raw=true"
+                                alt="">
+                            <p>4.4</p>
+                        </div>
+                        <div class="dot">.</div>
+                        <div class="BoxEl3It2">
+                            <p>48 MINS</p>
+                        </div>
+                        <div class="dot">.</div>
+                        <div class="BoxEl3It3">
+                            <p>&#8377;230 FOR ONE</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="BoxEl4">
+                        <img src="https://github.com/aniket-0703/Swiggy-Clone/blob/homePage/tar1.png?raw=true" alt="">
+                        <p>50% off | Use WELCOME50</p>
+                    </div>
+                </div>
+            </a>
+            <a href="">
+                <div class="Foodbox">
+                    <div class="BoxEl1">
+                        <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/y5pish9kftv5tsirbdbk"
+                            alt="Food Image">
+                    </div>
+                    <div class="BoxEl2">
+                        <h4>Chef Direct</h4>
+                        <p>North Indian, Chinese</p>
+                    </div>
+                    <div class="BoxEl3">
+                        <div class="BoxEl3It1">
+                            <img src="https://github.com/aniket-0703/Swiggy-Clone/blob/homePage/star1.png?raw=true"
+                                alt="">
+                            <p>4.5</p>
+                        </div>
+                        <div class="dot">.</div>
+                        <div class="BoxEl3It2">
+                            <p>38 MINS</p>
+                        </div>
+                        <div class="dot">.</div>
+                        <div class="BoxEl3It3">
+                            <p>&#8377;400 FOR TWO</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="BoxEl4">
+                        <img src="https://github.com/aniket-0703/Swiggy-Clone/blob/homePage/tar1.png?raw=true" alt="">
+                        <p>40% off | Use PAYTM WALLET</p>
+                    </div>
+                </div>
+            </a>
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

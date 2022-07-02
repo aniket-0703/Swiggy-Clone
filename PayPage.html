@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swiggy Offers</title>
+    <Style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            /* border: 2px solid red; */
+            height: 80px;
+        }
+
+        .child2>div>a {
+            text-decoration: none;
+            color: rgb(53, 53, 53);
+        }
+
+        .child2>div>a>p {
+            font-size: 18px;
+        }
+
+        .child1>div>a {
+            text-decoration: none;
+            /* color: rgb(53,53,53); */
+            color: rgb(0, 0, 104);
+            font-weight: bolder;
+        }
+
+        #loc {
+            color: rgb(53, 53, 53);
+            opacity: 0.7;
+        }
+
+        .navEl>a {
+            display: flex;
+            align-items: center;
+        }
+
+        .navEl>a:hover {
+            color: orange;
+        }
+
+        .navEl>a>p:last-child::first-letter {
+            font-weight: bolder;
+        }
+
+        .navEl>a>img {
+            width: 35px;
+            margin-left: 35px;
+        }
+
+        .fa-solid {
+            line-height: 3.6;
+        }
+
+        .fa-regular {
+            line-height: 3.6;
+        }
+
+        .child1 {
+            display: flex;
+            /* border: 2px solid red; */
+            /* justify-content: center; */
+            align-items: center;
+        }
+
+        .child2 {
+            display: flex;
+            /* border: 2px solid red; */
+            align-items: center;
+            /* justify-content: center; */
+
+            width: 48%;
+        }
+
+        .child2>div {
+            margin-right: 58px;
+        }
+
+        .child1 {
+            display: flex;
+            /* border: 2px solid red; */
+            align-items: center;
+            /* justify-content: center; */
+
+            width: 30%;
+        }
+
+        .child1>div {
+            margin-left: 30px;
+        }
+
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-weight: 300;
+            color: #282c3f;
+        }
+
+        h1 {
+            color: orangered;
+        }
+
+        div {
+            display: block;
+        }
+
+        .raj {
+            background-color: #005062;
+            max-width: 100%;
+            margin: 0 auto;
+            color: #fff;
+            height: 300px;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-align: center;
+            align-items: center;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+        }
+
+
+        .offer {
+            font-size: 50px;
+            font-weight: 600;
+            box-sizing: inherit;
+            margin-left: 70px;
+        }
+
+        .para {
+            font-size: 22px;
+            line-height: 1.2;
+            opacity: .8;
+            margin-left: 70px;
+        }
+
+        .log {
+            height: 200px;
+            margin-right: 70px;
+        }
+
+        .start {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+        }
+
+        .res {
+            font-size: 25px;
+            padding: 24px 0 20px;
+            color: black;
+            margin-left: 0px;
+
+
+
+        }
+
+        .reso {
+
+
+            font-size: 25px;
+            padding: 24px 0 20px;
+            color: black;
+            margin-left: 20px;
+
+
+
+        }
+
+
+
+
+
+        .title {
+            color: #282c3f;
+            font-size: 24px;
+            margin-left: 70px;
+            font-weight: 600;
+            padding-top: 59px;
+            font-weight: bold;
+            text-transform: capitalize;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-gap: 15px;
+            column-gap: 30px;
+            row-gap: 40px;
+            padding: 10px;
+            margin-right: 50px;
+            margin-left: 56px;
+        }
+
+        .InContainer {
+            border: 1px solid #e4e2e2;
+            border-radius: 2px;
+            box-sizing: border-box;
+            padding: 0.7vw 1.7vw;
+        }
+
+        .OfferCode {
+            align-items: center;
+            background-color: #fffae6;
+            border: 1px solid #d3d3d3;
+            box-sizing: border-box;
+            display: flex;
+            height: 25px;
+            justify-content: space-between;
+            padding: 15px;
+            width: 140px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-weight: 500;
+        }
+
+        .des {
+            font-weight: 500;
+            font-weight: bold;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .indes {
+            font-weight: 300;
+            color: #686b78;
+        }
+
+        .more {
+            color: #5D8ED5;
+            margin-top: 10px;
+            margin-bottom: 15px;
+            font-weight: 2000;
+            font-size: 15px;
+        }
+
+        .copyCode {
+            border: 1px solid orange;
+            width: 120px;
+            text-align: center;
+            color: orange;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            font-size: 14px;
+
+
+        }
+    </Style>
+</head>
+
+<body>
+    <nav>
+        <div class="child1">
+            <div class="navEl">
+                <a href="homePage.html"><img src="https://seeklogo.com/images/S/swiggy-logo-8EF8260FA4-seeklogo.com.png"
+                        alt="Swiggy Logo"></a>
+            </div>
+            <div class="navEl">
+                <a href="">
+                    <p>Other&nbsp;&nbsp;&nbsp;</p>
+                    <p id="loc">Pune, Maharashtra, India</p>
+                </a>
+            </div>
+        </div>
+        <div class="child2">
+            <div class="navEl">
+                <a href="">
+                    <i class="fa-solid fa-magnifying-glass">&nbsp;&nbsp;&nbsp;</i>
+                    <p>Search</p>
+                </a>
+            </div>
+            <div class="navEl">
+                <a href=""><i class="fa-solid fa-life-ring">&nbsp;&nbsp;&nbsp;</i>
+                    <p>Offers</p>
+                </a>
+            </div>
+            <div class="navEl">
+                <a href=""><i class="fa-regular fa-circle-question">&nbsp;&nbsp;&nbsp;</i>
+                    <p>Help</p>
+                </a>
+            </div>
+            <div class="navEl">
+                <a href=""><i class="fa-regular fa-user">&nbsp;&nbsp;&nbsp;</i>
+                    <p id="user">Sign in</p>
+                </a>
+            </div>
+            <div class="navEl">
+                <a href=""><i class="fa-solid fa-cart-shopping">&nbsp;&nbsp;&nbsp;</i>
+                    <p>Cart</p>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="raj">
+        <div>
+            <div class="offer"><b>Offers for you</b></div>
+            <div class="para"><b>Explore top deals and offers exclusively for you!</b></div>
+        </div>
+        <div>
+            <img class="log" alt
+                src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/KHu24Gqw_md3ham">
+        </div>
+    </div>
+    <div class="start">
+        <a href="http://127.0.0.1:5500/Swiggy-Clone/offers.html">
+            <div class="res">Restaurant Offers</div>
+        </a>
+        <a href="http://127.0.0.1:5500/Swiggy-Clone/PayPage.html">
+            <div class="reso">Payment offers/Coupons</div>
+        </a>
+    </div>
+    <hr>
+    <div class="new">
+        <h2 class="title">Available Coupons</h2>
+    </div>
+    <br>
+
+
+    <!-- Grid Start -->
+    <div class="grid-container">
+
+
+
+        <div class="InContainer">
+            <div class="OfferCode"><img
+                    src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_40,h_40/rng/md/ads/production/ue5ugfghnrd9qapk6omb"
+                    height="20" width="20" alt="">
+                <p>WELCOME50</p>
+            </div>
+            <h5 class="des">Extra flat ₹30 Paytm cashback</h5>
+            <p class="indes">Pay with Paytm wallet to get an additional cashback of ₹30</p>
+            <h3 class="more">+ MORE</h3>
+            <h5 class="copyCode">COPY CODE</h5>
+
+        </div>
+        <div class="InContainer">
+            <div class="OfferCode"><img
+                    src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_40,h_40/rng/md/ads/production/h7ubmsuwqi37sjtukyzl"
+                    height="20" width="20" alt="">
+                <p>ICICI150</p>
+            </div>
+            <h5 class="des">Get 20% discount using ICICI Bank Cards</h5>
+            <p class="indes">Maximum discount up to ₹150 on orders above ₹600</p>
+            <h3 class="more">+ MORE</h3>
+            <h5 class="copyCode">COPY CODE</h5>
+
+        </div>
+        <div class="InContainer">
+            <div class="OfferCode"><img
+                    src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_40,h_40/rng/md/ads/production/g879izo5vfglvxlrr1wg"
+                    height="20" width="20" alt="">
+                <p>PNBFOOD</p>
+            </div>
+            <h5 class="des">Get 20% discount using Punjab National Bank Cards</h5>
+            <p class="indes">Maximum discount up to ₹125 on orders above ₹299</p>
+            <h3 class="more">+ MORE</h3>
+            <h5 class="copyCode">COPY CODE</h5>
+
+        </div>
+        <div class="InContainer">
+            <div class="OfferCode"><img
+                    src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_40,h_40/rng/md/ads/production/bfdz3xkw1nqs0vczzwih"
+                    height="20" width="20" alt="">
+                <p>HDFC20</p>
+            </div>
+            <h5 class="des">Get 10% discount using HDFC Bank Credit Cards</h5>
+            <p class="indes">Maximum discount up to ₹150 on orders above ₹1250</p>
+            <h3 class="more">+ MORE</h3>
+            <h5 class="copyCode">COPY CODE</h5>
+
+        </div>
+        <div class="InContainer">
+            <div class="OfferCode"><img
+                    src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_40,h_40/rng/md/ads/production/lxxki5aa17ybp6j8xpjs"
+                    height="20" width="20" alt="">
+                <p>CITIFOODIE</p>
+            </div>
+            <h5 class="des">Get 30% discount using Citi Bank World & Infinite Debit Cards</h5>
+            <p class="indes">Maximum discount up to ₹500 on orders above ₹1200</p>
+            <h3 class="more">+ MORE</h3>
+            <h5 class="copyCode">COPY CODE</h5>
+
+        </div>
+        <div class="InContainer">
+            <div class="OfferCode"><img
+                    src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_40,h_40/rng/md/ads/production/rcyxgu4nsvv6tw9updmp"
+                    height="30" width="20" alt="">
+                <p>PAYTMSAVE</p>
+            </div>
+            <h5 class="des">Get assured cashback between ₹25 to ₹100 using Paytm wallet</h5>
+            <p class="indes">Assured cashback between ₹25 to ₹100 on Paytm transactions above ₹399</p>
+            <h3 class="more">+ MORE</h3>
+            <h5 class="copyCode">COPY CODE</h5>
+
+        </div>
+        <div class="InContainer">
+            <div class="OfferCode"><img
+                    src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_40,h_40/rng/md/ads/production/edgxhj148bqzphp4cbcc"
+                    height="20" width="20" alt="">
+                <p>AUBANK100</p>
+            </div>
+            <h5 class="des">Get 25% discount using AU Bank Cards</h5>
+            <p class="indes">Maximum discount up to ₹100 on orders above ₹249</p>
+            <h3 class="more">+ MORE</h3>
+            <h5 class="copyCode">COPY CODE</h5>
+
+        </div>
+        <div class="InContainer">
+            <div class="OfferCode"><img
+                    src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_40,h_40/rng/md/ads/production/xfufgimh3pycialrncwo"
+                    height="20" width="20" alt="">
+                <p>AXIS200</p>
+            </div>
+            <h5 class="des">Get 40% discount using Axis Bank Select Credit Cards</h5>
+            <p class="indes">Maximum discount up to ₹200 on orders above ₹400</p>
+            <h3 class="more">+ MORE</h3>
+            <h5 class="copyCode">COPY CODE</h5>
+
+        </div>
+        <div class="InContainer">
+            <div class="OfferCode"><img
+                    src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_40,h_40/rng/md/ads/production/pumbs2qgp2vh90ntjv4b"
+                    height="20" width="20" alt="">
+                <p>MBK100</p>
+            </div>
+            <h5 class="des">Get up to ₹100 cashback using MobiKwik wallet</h5>
+            <p class="indes"> Cashback up to ₹100 on MobiKwik transactions above ₹199</p>
+            <h3 class="more">+ MORE</h3>
+            <h5 class="copyCode">COPY CODE</h5>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
