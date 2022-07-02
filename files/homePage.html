@@ -7,9 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Order food online India's best food delivery service</title>
     <link rel="stylesheet" href="all.min.css">
+    <link rel="stylesheet" href="ash.css">
     <style>
         /* navbar start ------------------------->*/
         * {
+            font-family: ProximaNova, arial, Helvetica Neue, sans-serif;
             margin: 0;
             padding: 0;
         }
@@ -19,6 +21,10 @@
             justify-content: space-between;
             /* border: 2px solid red; */
             height: 80px;
+            position: sticky;
+            top: 0;
+            background-color: white;
+            z-index: 3;
         }
 
         .child2>div>a {
@@ -49,6 +55,21 @@
 
         .navEl>a:hover {
             color: orange;
+        }
+
+        /* .navEl>a>p:first-child{
+            padding-bottom: 10px;
+            border-bottom: 2px solid red;
+        } */
+
+        #ot {
+            border-bottom: 2px solid rgb(0, 0, 104);
+            font-weight: bolder;
+        }
+
+        #qq:hover #ot {
+            border-bottom: 2px solid orange;
+
         }
 
         .navEl>a>p:last-child::first-letter {
@@ -101,6 +122,15 @@
             margin-left: 30px;
         }
 
+        nav>.child1>.navEl>a>img {
+            transition: 0.5s;
+        }
+
+        nav>.child1>.navEl>a>img:hover {
+            transform: scale(1.2);
+            z-index: 2;
+        }
+
         /* navbar End ------------------------->*/
 
         /* heading start -----------------------> */
@@ -141,6 +171,10 @@
             display: flex;
             /* align-items: center; */
             justify-content: center;
+            /* position:fixed; */
+            top: 0;
+            z-index: 4;
+            background-color: white;
         }
 
         .secNav {
@@ -162,13 +196,14 @@
             display: flex;
             align-items: center;
             /* border: 2px solid red; */
-            height: 100%;
+            height: 103%;
         }
 
-        .secNav>.secNavChild2>.secNavChildEl:hover {
+        /* .secNav>.secNavChild2>.secNavChildEl:hover {
             border-bottom: 1px solid black;
-            height: 102%;
-        }
+            height: 103%;
+            border: 2px solid red;
+        } */
 
         .secNav>.secNavChild1 {
             display: flex;
@@ -187,6 +222,14 @@
             font-size: 16px;
         }
 
+        .secNav>.secNavChild2>.secNavChildEl:hover {
+            cursor: pointer;
+        }
+
+        .secNav>.secNavChild2>.secNavChildEl>p {
+            font-size: 16px;
+        }
+
         .secNav>.secNavChild2>.secNavChildEl>a>i {
             margin-left: 8px;
             color: orange;
@@ -194,6 +237,7 @@
 
         .secNav>.secNavChild2>.secNavChildEl:last-child>a>p {
             color: #3d4152;
+            font-size: 16px;
             font-weight: 600;
         }
 
@@ -208,56 +252,75 @@
             border: 0.01px solid lightgray;
             opacity: 0.6;
         }
+
         /* Second nav end -------------------------------> */
 
         /* gridding start -------------------------------> */
-        a{
+        a {
             text-decoration: none;
             color: black;
         }
-        .outContainer{
+
+        .outContainer {
             width: 100%;
             /* border: 2px solid red;    */
             padding-top: 20px;
         }
-        .outContainer>.incontainer{
+
+        .outContainer>.incontainer {
             width: 93.5%;
             margin: auto;
             /* border: 2px solid blue; */
             display: grid;
             row-gap: 15px;
             column-gap: 15px;
-            grid-template-columns: repeat(4,1fr);
+            grid-template-columns: repeat(4, 1fr);
         }
-        .outContainer>.incontainer>a:hover{
+
+        .outContainer>.incontainer>a:hover {
             /* box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px; */
             /* box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px; */
             box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+            cursor: auto;
         }
-        .outContainer>.incontainer>a>.box{
+
+
+
+        .outContainer>.incontainer>a>.box {
             /* border: 2px solid green; */
             padding: 20px 0;
         }
-        .outContainer>.incontainer>a>.box>.BoxEl1{
+
+        .outContainer>.incontainer>a>.box>.BoxEl1 {
             /* border: 2px solid orange; */
             width: 254px;
             margin: auto;
 
         }
-        .outContainer>.incontainer>a>.box>.BoxEl2{
+
+        .outContainer>.incontainer>a>.box>.BoxEl2 {
             /* border: 2px solid black; */
             width: 85%;
             margin: auto;
             margin-top: 15px;
         }
-        .outContainer>.incontainer>a>.box>.BoxEl2>h4{
+
+        .outContainer>.incontainer>a>.box>.BoxEl2>h3 {
             font-size: 17px;
+            font-weight: 500;
+            word-break: break-word;
         }
-        .outContainer>.incontainer>a>.box>.BoxEl2>p{
+
+        .outContainer>.incontainer>a>.box>.BoxEl2>h3::first-letter {
+            font-weight: 600;
+        }
+
+        .outContainer>.incontainer>a>.box>.BoxEl2>p {
             font-size: 13px;
             color: #686b78;
         }
-        .outContainer>.incontainer>a>.box>.BoxEl3{
+
+        .outContainer>.incontainer>a>.box>.BoxEl3 {
             /* border: 2px solid yellow; */
             width: 85%;
             margin: auto;
@@ -267,68 +330,119 @@
             margin-top: 15px;
             margin-bottom: 10px;
         }
-        .outContainer>.incontainer>a>.box>.BoxEl3>.BoxEl3It1{
+
+        .outContainer>.incontainer>a>.box>.BoxEl3>.BoxEl3It1 {
             background-color: #48c479;
             display: flex;
             width: 43px;
             justify-content: center;
             align-items: center;
             height: 20px;
-            justify-content:space-evenly;
+            justify-content: space-evenly;
             /* justify-content: center; */
         }
-        .outContainer>.incontainer>a>.box>.BoxEl3>.BoxEl3It2>p{
+
+        .outContainer>.incontainer>a>.box>.BoxEl3>.BoxEl3It2>p {
             padding-top: 4.5px;
             font-size: 12px;
             font-weight: 400;
             color: #535665;
         }
-        .outContainer>.incontainer>a>.box>.BoxEl3>.BoxEl3It3>p{
+
+        .outContainer>.incontainer>a>.box>.BoxEl3>.BoxEl3It3>p {
             padding-top: 4.5px;
             font-size: 12px;
             font-weight: 400;
             color: #535665;
         }
-        .outContainer>.incontainer>a>.box>.BoxEl3>.BoxEl3It1>p{
-            padding-top: 4.5px;
+
+        .outContainer>.incontainer>a>.box>.BoxEl3>.BoxEl3It1>p {
+            /* padding-top: 2px; */
             font-size: 12px;
             font-weight: 400;
             color: white;
         }
-        .outContainer>.incontainer>a>.box>.BoxEl3>.dot{
+
+        .outContainer>.incontainer>a>.box>.BoxEl3>.dot {
             font-weight: 600;
             padding-bottom: 6px;
         }
-        .outContainer>.incontainer>a>.box>.BoxEl3>.BoxEl3It1>img{
+
+        .outContainer>.incontainer>a>.box>.BoxEl3>.BoxEl3It1>img {
             width: 12px;
             height: 12px;
         }
-        .outContainer>.incontainer>a>.box>.BoxEl4{
+
+        .outContainer>.incontainer>a>.box>.BoxEl4 {
             /* border: 2px solid purple; */
             width: 85%;
             margin: auto;
             display: flex;
             margin-top: 10px;
         }
-        .outContainer>.incontainer>a>.box>.BoxEl4>img{
+
+        .outContainer>.incontainer>a>.box>.BoxEl4>img {
             margin-right: 4px;
             height: 20px;
         }
-        .outContainer>.incontainer>a>.box>.BoxEl4>p{
+
+        .outContainer>.incontainer>a>.box>.BoxEl4>p {
             margin-top: 2px;
             color: #8a584b;
             font-size: 15px;
             font-weight: 400;
         }
-        .outContainer>.incontainer>a>.box>.BoxEl1>img{
+
+        .outContainer>.incontainer>a>.box>.BoxEl1>img {
             width: 254px;
+            height: 160px;
             margin: auto;
         }
-        .outContainer>.incontainer>a>.box>hr{
+
+        .outContainer>.incontainer>a>.box>hr {
             width: 85%;
             /* border: 0.25px solid;
             opacity: 0.2; */
         }
+
+        .outContainer>.incontainer>a>.box>.BoxEl5 {
+            display: flex;
+            width: 100%;
+            margin-top: 20px;
+            /* border: 2px solid red; */
+            align-items: center;
+            justify-content: center;
+        }
+
+        .outContainer>.incontainer>a:hover .btn {
+            /* background-color: blue; */
+            border: 2px solid #48c479;
+            margin: -2px -2px;
+        }
+
+        .outContainer>.incontainer>a>.box>.BoxEl5>.btn {
+            visibility: hidden;
+            /* border: 2px solid white; */
+            padding: 2px 2px;
+            font-weight: 600;
+            display: flex;
+            /* align-items: center; */
+            justify-content: center;
+            width: 85%;
+            color: black;
+            border-radius: 5px;
+            /* background-color: orange; */
+        }
+
+        .outContainer>.incontainer>a>.box>.BoxEl5>.btn>img {
+            width: 15px;
+        }
+
+        /* .outContainer>.incontainer>a>.box>.BoxEl5>.btn:hover{
+            border: 2px solid #48c479;
+
+        } */
+
         /* grid end ---------------------------------------------> */
     </style>
 </head>
@@ -340,10 +454,10 @@
                 <a href="homePage.html"><img src="https://seeklogo.com/images/S/swiggy-logo-8EF8260FA4-seeklogo.com.png"
                         alt="Swiggy Logo"></a>
             </div>
-            <div class="navEl">
+            <div class="navEl" id="qq">
                 <a href="">
-                    <p>Other&nbsp;&nbsp;&nbsp;</p>
-                    <p id="loc">Pune, Maharashtra, India</p>
+                    <p id="ot">Other</p>
+                    <p id="loc">&nbsp;&nbsp;&nbsp;Kolhapur, Maharashtra, India</p>
                 </a>
             </div>
         </div>
@@ -355,7 +469,7 @@
                 </a>
             </div>
             <div class="navEl">
-                <a href=""><i class="fa-solid fa-life-ring">&nbsp;&nbsp;&nbsp;</i>
+                <a href="offers.html"><i class="fa-solid fa-life-ring">&nbsp;&nbsp;&nbsp;</i>
                     <p>Offers</p>
                 </a>
             </div>
@@ -366,7 +480,7 @@
             </div>
             <div class="navEl">
                 <a href=""><i class="fa-regular fa-user">&nbsp;&nbsp;&nbsp;</i>
-                    <p id="user">Ash</p>
+                    <p id="user">Aniket</p>
                 </a>
             </div>
             <div class="navEl">
@@ -406,30 +520,20 @@
                 <h1>100 restaurants</h1>
             </div>
             <div class="secNavChild2">
-                <div class="secNavChildEl">
-                    <a href="">
-                        <p>Relevance</p>
-                    </a>
+                <div onclick="rel()" id="mn1" class="secNavChildEl">
+                    <p>Relevance</p>
                 </div>
-                <div class="secNavChildEl">
-                    <a href="">
-                        <p>Delivery Time</p>
-                    </a>
+                <div onclick="delT()" id="mn2" class="secNavChildEl">
+                    <p>Delivery Time</p>
                 </div>
-                <div class="secNavChildEl">
-                    <a href="">
-                        <p>Rating</p>
-                    </a>
+                <div onclick="rat()" id="mn3" class="secNavChildEl">
+                    <p>Rating</p>
                 </div>
-                <div class="secNavChildEl">
-                    <a href="">
-                        <p>Cost: Low to High</p>
-                    </a>
+                <div onclick="cLTH()" id="mn4" class="secNavChildEl">
+                    <p>Cost: Low to High</p>
                 </div>
-                <div class="secNavChildEl">
-                    <a href="">
-                        <p>Cost: High to Low</p>
-                    </a>
+                <div onclick="cHTL()" id="mn5" class="secNavChildEl">
+                    <p>Cost: High to Low</p>
                 </div>
                 <div class="secNavChildEl">
                     <a href="">
@@ -443,13 +547,14 @@
 
     <div class="outContainer">
         <div class="incontainer">
-            <a href="">
+            <!-- <a href="">
                 <div class="box">
                     <div class="BoxEl1">
-                        <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/pwg0c0snpd6u0mu1edoa" alt="Food Image">
+                        <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/pwg0c0snpd6u0mu1edoa"
+                            alt="Food Image">
                     </div>
                     <div class="BoxEl2">
-                        <h4>Neo's Chinese</h4>
+                        <h3>Neo's Chinese</h3>
                         <p>North Indian Punjabi</p>
                     </div>
                     <div class="BoxEl3">
@@ -471,15 +576,19 @@
                         <img src="tar1.png" alt="">
                         <p>50% off | Use WELCOME50</p>
                     </div>
+                    <div class="BoxEl5">
+                        <button class="btn">Add to <img src="basket-cart-icon-27.png" alt=""></i></button>
+                    </div>
                 </div>
             </a>
             <a href="">
                 <div class="box">
                     <div class="BoxEl1">
-                        <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/pwg0c0snpd6u0mu1edoa" alt="Food Image">
+                        <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/pwg0c0snpd6u0mu1edoa"
+                            alt="Food Image">
                     </div>
                     <div class="BoxEl2">
-                        <h4>Neo's Chinese</h4>
+                        <h3>Neo's Chinese</h3>
                         <p>North Indian Punjabi</p>
                     </div>
                     <div class="BoxEl3">
@@ -501,15 +610,19 @@
                         <img src="tar1.png" alt="">
                         <p>50% off | Use WELCOME50</p>
                     </div>
+                    <div class="BoxEl5">
+                        <button class="btn">Add to <img src="basket-cart-icon-27.png" alt=""></i></button>
+                    </div>
                 </div>
             </a>
             <a href="">
                 <div class="box">
                     <div class="BoxEl1">
-                        <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/pwg0c0snpd6u0mu1edoa" alt="Food Image">
+                        <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/pwg0c0snpd6u0mu1edoa"
+                            alt="Food Image">
                     </div>
                     <div class="BoxEl2">
-                        <h4>Neo's Chinese</h4>
+                        <h3>Neo's Chinese</h3>
                         <p>North Indian Punjabi</p>
                     </div>
                     <div class="BoxEl3">
@@ -531,15 +644,19 @@
                         <img src="tar1.png" alt="">
                         <p>50% off | Use WELCOME50</p>
                     </div>
+                    <div class="BoxEl5">
+                        <button class="btn">Add to <img src="basket-cart-icon-27.png" alt=""></i></button>
+                    </div>
                 </div>
             </a>
             <a href="">
                 <div class="box">
                     <div class="BoxEl1">
-                        <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/pwg0c0snpd6u0mu1edoa" alt="Food Image">
+                        <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/pwg0c0snpd6u0mu1edoa"
+                            alt="Food Image">
                     </div>
                     <div class="BoxEl2">
-                        <h4>Neo's Chinese</h4>
+                        <h3>Neo's Chinese</h3>
                         <p>North Indian Punjabi</p>
                     </div>
                     <div class="BoxEl3">
@@ -561,15 +678,19 @@
                         <img src="tar1.png" alt="">
                         <p>50% off | Use WELCOME50</p>
                     </div>
+                    <div class="BoxEl5">
+                        <button class="btn">Add to <img src="basket-cart-icon-27.png" alt=""></i></button>
+                    </div>
                 </div>
             </a>
             <a href="">
                 <div class="box">
                     <div class="BoxEl1">
-                        <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/pwg0c0snpd6u0mu1edoa" alt="Food Image">
+                        <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/pwg0c0snpd6u0mu1edoa"
+                            alt="Food Image">
                     </div>
                     <div class="BoxEl2">
-                        <h4>Neo's Chinese</h4>
+                        <h3>Neo's Chinese</h3>
                         <p>North Indian Punjabi</p>
                     </div>
                     <div class="BoxEl3">
@@ -591,15 +712,19 @@
                         <img src="tar1.png" alt="">
                         <p>50% off | Use WELCOME50</p>
                     </div>
+                    <div class="BoxEl5">
+                        <button class="btn">Add to <img src="basket-cart-icon-27.png" alt=""></i></button>
+                    </div>
                 </div>
             </a>
             <a href="">
                 <div class="box">
                     <div class="BoxEl1">
-                        <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/pwg0c0snpd6u0mu1edoa" alt="Food Image">
+                        <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/pwg0c0snpd6u0mu1edoa"
+                            alt="Food Image">
                     </div>
                     <div class="BoxEl2">
-                        <h4>Neo's Chinese</h4>
+                        <h3>Neo's Chinese</h3>
                         <p>North Indian Punjabi</p>
                     </div>
                     <div class="BoxEl3">
@@ -621,15 +746,19 @@
                         <img src="tar1.png" alt="">
                         <p>50% off | Use WELCOME50</p>
                     </div>
+                    <div class="BoxEl5">
+                        <button class="btn">Add to <img src="basket-cart-icon-27.png" alt=""></i></button>
+                    </div>
                 </div>
             </a>
             <a href="">
                 <div class="box">
                     <div class="BoxEl1">
-                        <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/pwg0c0snpd6u0mu1edoa" alt="Food Image">
+                        <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/pwg0c0snpd6u0mu1edoa"
+                            alt="Food Image">
                     </div>
                     <div class="BoxEl2">
-                        <h4>Neo's Chinese</h4>
+                        <h3>Neo's Chinese</h3>
                         <p>North Indian Punjabi</p>
                     </div>
                     <div class="BoxEl3">
@@ -651,15 +780,19 @@
                         <img src="tar1.png" alt="">
                         <p>50% off | Use WELCOME50</p>
                     </div>
+                    <div class="BoxEl5">
+                        <button class="btn">Add to <img src="basket-cart-icon-27.png" alt=""></i></button>
+                    </div>
                 </div>
             </a>
             <a href="">
                 <div class="box">
                     <div class="BoxEl1">
-                        <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/pwg0c0snpd6u0mu1edoa" alt="Food Image">
+                        <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/pwg0c0snpd6u0mu1edoa"
+                            alt="Food Image">
                     </div>
                     <div class="BoxEl2">
-                        <h4>Neo's Chinese</h4>
+                        <h3>Neo's Chinese</h3>
                         <p>North Indian Punjabi</p>
                     </div>
                     <div class="BoxEl3">
@@ -681,12 +814,888 @@
                         <img src="tar1.png" alt="">
                         <p>50% off | Use WELCOME50</p>
                     </div>
+                    <div class="BoxEl5">
+                        <button class="btn">Add to <img src="basket-cart-icon-27.png" alt=""></i></button>
+                    </div>
                 </div>
-            </a>
-            
+            </a> -->
         </div>
     </div>
 
 </body>
+
+<script>
+    var arr = [{
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/eiynr8cytghzx2tcqocc",
+        name: "La Pinoz Pizza",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 4.4,
+        time: 25,
+        price: 30
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/cgf7qsoqsvfwletamxt4",
+        name: "MH 12 Pav Bhaji",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 3.3,
+        time: 45,
+        price: 20
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/rmf8gsxyxtgejfj73dxe",
+        name: "Ramsar Bakery",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 2.2,
+        time: 15,
+        price: 40
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/mnhmehdptltqyyvab7f7",
+        name: "SAPTRANG COFFEE SHOP",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 4.4,
+        time: 35,
+        price: 30
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/dmglrqh8j4mxemsdejsb",
+        name: "Oven Story Pizza",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 3.3,
+        time: 55,
+        price: 20
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/rndbbuntatuzxhyxdq8q",
+        name: "Faasos - Wrap and Rolls",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 2.2,
+        time: 20,
+        price: 40
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/mjgogdio8whva5sm76lo",
+        name: "KHADYAABRAMANTI",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 4.4,
+        time: 40,
+        price: 30
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/vxf5oi05sinexpmo3pgn",
+        name: "Behrouz Biryani",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 3.3,
+        time: 10,
+        price: 20
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/v7yesiasuwzmhfimdfbt",
+        name: "Snack Shack",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 2.2,
+        time: 30,
+        price: 40
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/piohreuutzllhqkzf79d",
+        name: "McDonald's",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 4.4,
+        time: 50,
+        price: 30
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/eiynr8cytghzx2tcqocc",
+        name: "La Pinoz Pizza",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 4.4,
+        time: 25,
+        price: 30
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/cgf7qsoqsvfwletamxt4",
+        name: "MH 12 Pav Bhaji",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 3.3,
+        time: 45,
+        price: 20
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/rmf8gsxyxtgejfj73dxe",
+        name: "Ramsar Bakery",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 2.2,
+        time: 15,
+        price: 40
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/mnhmehdptltqyyvab7f7",
+        name: "SAPTRANG COFFEE SHOP",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 4.4,
+        time: 35,
+        price: 30
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/dmglrqh8j4mxemsdejsb",
+        name: "Oven Story Pizza",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 3.3,
+        time: 55,
+        price: 20
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/rndbbuntatuzxhyxdq8q",
+        name: "Faasos - Wrap and Rolls",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 2.2,
+        time: 20,
+        price: 40
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/mjgogdio8whva5sm76lo",
+        name: "KHADYAABRAMANTI",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 4.4,
+        time: 40,
+        price: 30
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/vxf5oi05sinexpmo3pgn",
+        name: "Behrouz Biryani",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 3.3,
+        time: 10,
+        price: 20
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/v7yesiasuwzmhfimdfbt",
+        name: "Snack Shack",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 2.2,
+        time: 30,
+        price: 40
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/piohreuutzllhqkzf79d",
+        name: "McDonald's",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 4.4,
+        time: 50,
+        price: 30
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/eiynr8cytghzx2tcqocc",
+        name: "La Pinoz Pizza",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 4.4,
+        time: 25,
+        price: 30
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/cgf7qsoqsvfwletamxt4",
+        name: "MH 12 Pav Bhaji",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 3.3,
+        time: 45,
+        price: 20
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/rmf8gsxyxtgejfj73dxe",
+        name: "Ramsar Bakery",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 2.2,
+        time: 15,
+        price: 40
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/mnhmehdptltqyyvab7f7",
+        name: "SAPTRANG COFFEE SHOP",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 4.4,
+        time: 35,
+        price: 30
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/dmglrqh8j4mxemsdejsb",
+        name: "Oven Story Pizza",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 3.3,
+        time: 55,
+        price: 20
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/rndbbuntatuzxhyxdq8q",
+        name: "Faasos - Wrap and Rolls",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 2.2,
+        time: 20,
+        price: 40
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/mjgogdio8whva5sm76lo",
+        name: "KHADYAABRAMANTI",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 4.4,
+        time: 40,
+        price: 30
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/vxf5oi05sinexpmo3pgn",
+        name: "Behrouz Biryani",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 3.3,
+        time: 10,
+        price: 20
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/v7yesiasuwzmhfimdfbt",
+        name: "Snack Shack",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 2.2,
+        time: 30,
+        price: 40
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/piohreuutzllhqkzf79d",
+        name: "McDonald's",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 4.4,
+        time: 50,
+        price: 30
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/eiynr8cytghzx2tcqocc",
+        name: "La Pinoz Pizza",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 4.4,
+        time: 25,
+        price: 30
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/cgf7qsoqsvfwletamxt4",
+        name: "MH 12 Pav Bhaji",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 3.3,
+        time: 45,
+        price: 20
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/rmf8gsxyxtgejfj73dxe",
+        name: "Ramsar Bakery",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 2.2,
+        time: 15,
+        price: 40
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/mnhmehdptltqyyvab7f7",
+        name: "SAPTRANG COFFEE SHOP",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 4.4,
+        time: 35,
+        price: 30
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/dmglrqh8j4mxemsdejsb",
+        name: "Oven Story Pizza",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 3.3,
+        time: 55,
+        price: 20
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/rndbbuntatuzxhyxdq8q",
+        name: "Faasos - Wrap and Rolls",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 2.2,
+        time: 20,
+        price: 40
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/mjgogdio8whva5sm76lo",
+        name: "KHADYAABRAMANTI",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 4.4,
+        time: 40,
+        price: 30
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/vxf5oi05sinexpmo3pgn",
+        name: "Behrouz Biryani",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 3.3,
+        time: 10,
+        price: 20
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/v7yesiasuwzmhfimdfbt",
+        name: "Snack Shack",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 2.2,
+        time: 30,
+        price: 40
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/piohreuutzllhqkzf79d",
+        name: "McDonald's",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 4.4,
+        time: 50,
+        price: 30
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/eiynr8cytghzx2tcqocc",
+        name: "La Pinoz Pizza",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 4.4,
+        time: 25,
+        price: 30
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/cgf7qsoqsvfwletamxt4",
+        name: "MH 12 Pav Bhaji",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 3.3,
+        time: 45,
+        price: 20
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/rmf8gsxyxtgejfj73dxe",
+        name: "Ramsar Bakery",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 2.2,
+        time: 15,
+        price: 40
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/mnhmehdptltqyyvab7f7",
+        name: "SAPTRANG COFFEE SHOP",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 4.4,
+        time: 35,
+        price: 30
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/dmglrqh8j4mxemsdejsb",
+        name: "Oven Story Pizza",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 3.3,
+        time: 55,
+        price: 20
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/rndbbuntatuzxhyxdq8q",
+        name: "Faasos - Wrap and Rolls",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 2.2,
+        time: 20,
+        price: 40
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/mjgogdio8whva5sm76lo",
+        name: "KHADYAABRAMANTI",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 4.4,
+        time: 40,
+        price: 30
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/vxf5oi05sinexpmo3pgn",
+        name: "Behrouz Biryani",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 3.3,
+        time: 10,
+        price: 20
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/v7yesiasuwzmhfimdfbt",
+        name: "Snack Shack",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 2.2,
+        time: 30,
+        price: 40
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/piohreuutzllhqkzf79d",
+        name: "McDonald's",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 4.4,
+        time: 50,
+        price: 30
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/eiynr8cytghzx2tcqocc",
+        name: "La Pinoz Pizza",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 4.4,
+        time: 25,
+        price: 30
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/cgf7qsoqsvfwletamxt4",
+        name: "MH 12 Pav Bhaji",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 3.3,
+        time: 45,
+        price: 20
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/rmf8gsxyxtgejfj73dxe",
+        name: "Ramsar Bakery",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 2.2,
+        time: 15,
+        price: 40
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/mnhmehdptltqyyvab7f7",
+        name: "SAPTRANG COFFEE SHOP",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 4.4,
+        time: 35,
+        price: 30
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/dmglrqh8j4mxemsdejsb",
+        name: "Oven Story Pizza",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 3.3,
+        time: 55,
+        price: 20
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/rndbbuntatuzxhyxdq8q",
+        name: "Faasos - Wrap and Rolls",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 2.2,
+        time: 20,
+        price: 40
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/mjgogdio8whva5sm76lo",
+        name: "KHADYAABRAMANTI",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 4.4,
+        time: 40,
+        price: 30
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/vxf5oi05sinexpmo3pgn",
+        name: "Behrouz Biryani",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 3.3,
+        time: 10,
+        price: 20
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/v7yesiasuwzmhfimdfbt",
+        name: "Snack Shack",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 2.2,
+        time: 30,
+        price: 40
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/piohreuutzllhqkzf79d",
+        name: "McDonald's",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 4.4,
+        time: 50,
+        price: 30
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/eiynr8cytghzx2tcqocc",
+        name: "La Pinoz Pizza",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 4.4,
+        time: 25,
+        price: 30
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/cgf7qsoqsvfwletamxt4",
+        name: "MH 12 Pav Bhaji",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 3.3,
+        time: 45,
+        price: 20
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/rmf8gsxyxtgejfj73dxe",
+        name: "Ramsar Bakery",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 2.2,
+        time: 15,
+        price: 40
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/mnhmehdptltqyyvab7f7",
+        name: "SAPTRANG COFFEE SHOP",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 4.4,
+        time: 35,
+        price: 30
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/dmglrqh8j4mxemsdejsb",
+        name: "Oven Story Pizza",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 3.3,
+        time: 55,
+        price: 20
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/rndbbuntatuzxhyxdq8q",
+        name: "Faasos - Wrap and Rolls",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 2.2,
+        time: 20,
+        price: 40
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/mjgogdio8whva5sm76lo",
+        name: "KHADYAABRAMANTI",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 4.4,
+        time: 40,
+        price: 30
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/vxf5oi05sinexpmo3pgn",
+        name: "Behrouz Biryani",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 3.3,
+        time: 10,
+        price: 20
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/v7yesiasuwzmhfimdfbt",
+        name: "Snack Shack",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 2.2,
+        time: 30,
+        price: 40
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/piohreuutzllhqkzf79d",
+        name: "McDonald's",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 4.4,
+        time: 50,
+        price: 30
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/eiynr8cytghzx2tcqocc",
+        name: "La Pinoz Pizza",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 4.4,
+        time: 25,
+        price: 30
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/cgf7qsoqsvfwletamxt4",
+        name: "MH 12 Pav Bhaji",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 3.3,
+        time: 45,
+        price: 20
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/rmf8gsxyxtgejfj73dxe",
+        name: "Ramsar Bakery",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 2.2,
+        time: 15,
+        price: 40
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/mnhmehdptltqyyvab7f7",
+        name: "SAPTRANG COFFEE SHOP",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 4.4,
+        time: 35,
+        price: 30
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/dmglrqh8j4mxemsdejsb",
+        name: "Oven Story Pizza",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 3.3,
+        time: 55,
+        price: 20
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/rndbbuntatuzxhyxdq8q",
+        name: "Faasos - Wrap and Rolls",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 2.2,
+        time: 20,
+        price: 40
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/mjgogdio8whva5sm76lo",
+        name: "KHADYAABRAMANTI",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 4.4,
+        time: 40,
+        price: 30
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/vxf5oi05sinexpmo3pgn",
+        name: "Behrouz Biryani",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 3.3,
+        time: 10,
+        price: 20
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/v7yesiasuwzmhfimdfbt",
+        name: "Snack Shack",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 2.2,
+        time: 30,
+        price: 40
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/piohreuutzllhqkzf79d",
+        name: "McDonald's",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 4.4,
+        time: 50,
+        price: 30
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/eiynr8cytghzx2tcqocc",
+        name: "La Pinoz Pizza",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 4.4,
+        time: 25,
+        price: 30
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/cgf7qsoqsvfwletamxt4",
+        name: "MH 12 Pav Bhaji",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 3.3,
+        time: 45,
+        price: 20
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/rmf8gsxyxtgejfj73dxe",
+        name: "Ramsar Bakery",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 2.2,
+        time: 15,
+        price: 40
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/mnhmehdptltqyyvab7f7",
+        name: "SAPTRANG COFFEE SHOP",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 4.4,
+        time: 35,
+        price: 30
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/dmglrqh8j4mxemsdejsb",
+        name: "Oven Story Pizza",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 3.3,
+        time: 55,
+        price: 20
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/rndbbuntatuzxhyxdq8q",
+        name: "Faasos - Wrap and Rolls",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 2.2,
+        time: 20,
+        price: 40
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/mjgogdio8whva5sm76lo",
+        name: "KHADYAABRAMANTI",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 4.4,
+        time: 40,
+        price: 30
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/vxf5oi05sinexpmo3pgn",
+        name: "Behrouz Biryani",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 3.3,
+        time: 10,
+        price: 20
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/v7yesiasuwzmhfimdfbt",
+        name: "Snack Shack",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 2.2,
+        time: 30,
+        price: 40
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/piohreuutzllhqkzf79d",
+        name: "McDonald's",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 4.4,
+        time: 50,
+        price: 30
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/eiynr8cytghzx2tcqocc",
+        name: "La Pinoz Pizza",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 4.4,
+        time: 25,
+        price: 30
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/cgf7qsoqsvfwletamxt4",
+        name: "MH 12 Pav Bhaji",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 3.3,
+        time: 45,
+        price: 20
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/rmf8gsxyxtgejfj73dxe",
+        name: "Ramsar Bakery",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 2.2,
+        time: 15,
+        price: 40
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/mnhmehdptltqyyvab7f7",
+        name: "SAPTRANG COFFEE SHOP",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 4.4,
+        time: 35,
+        price: 30
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/dmglrqh8j4mxemsdejsb",
+        name: "Oven Story Pizza",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 3.3,
+        time: 55,
+        price: 20
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/rndbbuntatuzxhyxdq8q",
+        name: "Faasos - Wrap and Rolls",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 2.2,
+        time: 20,
+        price: 40
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/mjgogdio8whva5sm76lo",
+        name: "KHADYAABRAMANTI",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 4.4,
+        time: 40,
+        price: 30
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/vxf5oi05sinexpmo3pgn",
+        name: "Behrouz Biryani",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 3.3,
+        time: 10,
+        price: 20
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/v7yesiasuwzmhfimdfbt",
+        name: "Snack Shack",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 2.2,
+        time: 30,
+        price: 40
+    }, {
+        img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/piohreuutzllhqkzf79d",
+        name: "McDonald's",
+        abt: "Pizzas, Italian, Beverages, Snacks, Desserts",
+        rating: 4.4,
+        time: 50,
+        price: 30
+    }]
+
+    // func(arr,"r");
+    window.addEventListener("load", function () {
+        rel();
+    });
+    function func(data,qp) {
+        console.log(qp);
+        document.querySelector(".incontainer").innerText = "";
+        var pp=document.querySelector("#mn1");
+        pp.style.borderBottom="";
+        var oo=document.querySelector("#mn2");
+        oo.style.borderBottom="";
+        var ii=document.querySelector("#mn3");
+        ii.style.borderBottom="";
+        var uu=document.querySelector("#mn4");
+        uu.style.borderBottom="";
+        var yy=document.querySelector("#mn5");
+        yy.style.borderBottom="";
+        if(qp=="r"){
+            pp.style.borderBottom="1px solid black";
+        }else if(qp=="d"){
+            oo.style.borderBottom="1px solid black";
+        }else if(qp=="ra"){
+            ii.style.borderBottom="1px solid black";
+        }else if(qp=="HTL"){
+            yy.style.borderBottom="1px solid black";
+        }else if(qp=="LTH"){
+            uu.style.borderBottom="1px solid black";
+        }
+        // border-bottom: 1px solid black;
+        //     height: 103%;
+        data.forEach(el => {
+            var a = document.createElement("a");
+            a.setAttribute("href", "");
+            var box = document.createElement("div");
+            box.setAttribute("class", "box");
+            var el1 = document.createElement("div");
+            el1.setAttribute("class", "BoxEl1");
+            var imgP = document.createElement("img");
+            imgP.setAttribute("src", el.img);
+            var el2 = document.createElement("div");
+            el2.setAttribute("class", "BoxEl2");
+            var h4 = document.createElement("h3");
+            h4.innerText = el.name;
+            var pEl2 = document.createElement("p");
+            pEl2.innerText = el.abt;
+            var el3 = document.createElement("div");
+            el3.setAttribute("class", "BoxEl3");
+            var it1 = document.createElement("div");
+            it1.setAttribute("class", "BoxEl3It1");
+            var imgS = document.createElement("img");
+            imgS.setAttribute("src", "star1.png");
+            var pEl3It1 = document.createElement("p");
+            var z = el.rating;
+            pEl3It1.innerText = el.rating;
+            
+            var dum1 = document.createElement("div");
+            dum1.innerText = ".";
+            dum1.setAttribute("class", "dot");
+            var dum2 = document.createElement("div");
+            dum2.innerText = ".";
+            dum2.setAttribute("class", "dot");
+            var it2 = document.createElement("div");
+            it2.setAttribute("class", "BoxEl3It2");
+            var pEl3It2 = document.createElement("p");
+            pEl3It2.innerText = el.time + " MINS";
+            var it3 = document.createElement("div");
+            it3.setAttribute("class", "BoxEl3It3");
+            var pEl3It3 = document.createElement("p");
+            pEl3It3.innerText = "$" + el.price + " FOR TWO";
+            var hr = document.createElement("hr");
+            var el4 = document.createElement("div");
+            el4.setAttribute("class", "BoxEl4");
+            var imgSe = document.createElement("img");
+            imgSe.setAttribute("src", "tar1.png");
+            var pEl4 = document.createElement("p");
+            pEl4.innerText = "50% off | Use WELCOME50";
+            var el5 = document.createElement("div");
+            el5.setAttribute("class", "BoxEl5");
+            var but = document.createElement("button");
+            but.setAttribute("class", "btn");
+
+            if (z >= 4) {
+                it1.style.backgroundColor = "#48c479";
+                but.style.border="2px solid #48c479"
+            } else if (z >= 3 && z < 4) {
+                it1.style.backgroundColor = "#db7c38";
+                but.style.border="2px solid #db7c38"
+            } else {
+                it1.style.backgroundColor = "rgb(214, 214, 6)";
+                but.style.border="2px solid rgb(214, 214, 6)"
+            }
+
+            but.addEventListener("click", function () {
+                atc(el);
+            });
+            a.addEventListener("mouseover", function () {
+                but.style.visibility = "visible";
+            });
+            a.addEventListener("mouseout", function () {
+                but.style.visibility = "hidden";
+            });
+            var bimg = document.createElement("img");
+            bimg.setAttribute("src", "basket-cart-icon-27.png");
+            but.innerText = "Add to  ";
+            but.append(bimg);
+            it1.append(imgS, pEl3It1);
+            it2.append(pEl3It2);
+            it3.append(pEl3It3);
+            el1.append(imgP);
+            el2.append(h4, pEl2);
+            el3.append(it1, dum1, it2, dum2, it3);
+            el4.append(imgSe, pEl4);
+            el5.append(but);
+            box.append(el1, el2, el3, hr, el4, el5);
+            a.append(box);
+            document.querySelector(".incontainer").append(a);
+        });
+    }
+
+    function atc(el) {
+        var cartList = JSON.parse(localStorage.getItem("cartList")) || [];
+        cartList.push(el);
+        localStorage.setItem("cartList", JSON.stringify(cartList));
+    }
+
+    var q = arr;
+    function rel() {
+        arr=shuffle(arr);
+        func(arr,"r");
+        console.log(arr);
+    }
+    function delT() {
+        q.sort(function (a, b) { return a.time - b.time });
+        console.log(q);
+        func(q,"d");
+    }
+    function rat() {
+        q.sort(function (a, b) { return b.rating - a.rating });
+        console.log(q);
+        func(q,"ra");
+    }
+    function cHTL() {
+        q.sort(function (a, b) { return b.price - a.price });
+        console.log(q);
+        func(q,"HTL");
+    }
+    function cLTH() {
+        q.sort(function (a, b) { return a.price - b.price });
+        console.log(q);
+        func(q,"LTH");
+    }
+    function shuffle(array) {
+        let currentIndex = array.length, randomIndex;
+
+        // While there remain elements to shuffle.
+        while (currentIndex != 0) {
+
+            // Pick a remaining element.
+            randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex--;
+
+            // And swap it with the current element.
+            [array[currentIndex], array[randomIndex]] = [
+                array[randomIndex], array[currentIndex]];
+        }
+
+        return array;
+    }
+
+</script>
 
 </html>
